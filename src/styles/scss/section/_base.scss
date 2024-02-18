@@ -1,0 +1,34 @@
+@use "../custom" as *;
+:root {
+  body {
+    background-color: $white;
+    margin: 0;
+  }
+  // Scrollbar
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: $g-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 12px;
+
+    &:hover {
+      background: $secondary;
+    }
+  }
+
+  img,
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+
+  ul {
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    padding-inline-start: 0px;
+  }
+}

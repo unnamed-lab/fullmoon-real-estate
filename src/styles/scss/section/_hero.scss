@@ -1,0 +1,98 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  margin-bottom: 1rem;
+
+  @include responsive(mobile) {
+    height: 60dvh;
+  }
+
+  .bgBackdrop {
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $black, $alpha: 0.5);
+  }
+
+  .bgWave {
+    z-index: 12;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+    height: clamp(30px, 40px, 60px);
+
+    @include responsive(mobile) {
+      bottom: -1.1rem;
+    }
+
+    svg {
+      width: 100%;
+      height: inherit;
+      path {
+        height: 100%;
+      }
+    }
+  }
+
+  .bgPattern {
+    z-index: 10;
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+
+    @include responsive(mobile) {
+      left: -30%;
+    }
+  }
+
+  img {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    width: 100dvw;
+    height: inherit;
+  }
+
+  .hero_content {
+    z-index: 13;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto clamp(4rem, 6rem, 20%);
+    color: $white;
+    gap: 1rem;
+
+    @include responsive(mobile) {
+      margin: auto clamp(0.75rem, 1.25rem, 1.5rem);
+      gap: 0.75rem;
+    }
+
+    h1 {
+      width: 70%;
+
+      @include responsive(mobile) {
+        width: 90%;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
