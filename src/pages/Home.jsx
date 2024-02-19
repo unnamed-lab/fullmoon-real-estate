@@ -1,4 +1,4 @@
-import { Catalogue, Hero, Service } from "../components/home";
+import { AboutCompany, Catalogue, Hero, Service } from "../components/home";
 import bgImg from "../assets/img/banner01.jpg";
 import landImg from "../assets/img/land.png";
 import logo from "../assets/icons/logo.png";
@@ -71,17 +71,6 @@ function Home() {
       isAvailable: true,
       hotOffer: false,
     },
-    {
-      title: "Residential land for sale ",
-      location: "Lekki phase 2 by emerald estate",
-      description:
-        "Treasure island estate phase 1 extension more than 200 housing units are projected for delivery in the scheme.",
-      price: 2000000,
-      size: "600sqm",
-      thumbnail: landImg,
-      isAvailable: true,
-      hotOffer: false,
-    },
   ];
 
   return (
@@ -90,8 +79,9 @@ function Home() {
         <h1>Build your dream home on the finest property</h1>
         <SearchField />
       </Hero>
-      <Service logo={logo} content={services} />
+      <AboutCompany logo={logo} content={services} />
       <Catalogue products={products} />
+      <Service />
     </>
   );
 }

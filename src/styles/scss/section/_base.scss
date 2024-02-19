@@ -27,11 +27,17 @@
   }
 
   ul {
+    list-style: none;
     margin-block-start: 0.4em;
     margin-block-end: 0.4em;
     padding-inline-start: 0px;
   }
   section {
     padding: 2rem 4rem;
+
+    @include responsive(mobile) {
+    padding: 1.25rem;
+  }
+
   }
 }

@@ -147,12 +147,18 @@
   height: inherit;
 }
 :root ul {
+  list-style: none;
   margin-block-start: 0.4em;
   margin-block-end: 0.4em;
   padding-inline-start: 0px;
 }
 :root section {
   padding: 2rem 4rem;
+}
+@media (max-width: 767px) {
+  :root section {
+    padding: 1.25rem;
+  }
 }
 
 .input_group {
