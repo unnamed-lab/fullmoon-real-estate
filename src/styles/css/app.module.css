@@ -206,7 +206,7 @@
   height: 60px;
   border-radius: 60%;
   background-color: #ffffff;
-  box-shadow: 5px 7px 15px #D3D3D3;
+  box-shadow: 5px 7px 15px #d3d3d3;
 }
 @media (max-width: 767px) {
   .service_brief .service_row .service_menu .item_service .icon_placeholder span {
@@ -394,7 +394,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
   grid-row: auto/span 2;
   color: #ffffff;
   overflow: hidden;
@@ -460,11 +460,94 @@
   text-transform: uppercase;
 }
 .service_showcase .gallery li .more a {
+  width: 100%;
+  display: flex;
   color: #ffffff;
 }
-.service_showcase .gallery li .more span {
+.service_showcase .gallery li .more a span {
   display: flex;
   margin-left: auto;
+}
+
+.find_agent .agent_gallery {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem auto;
+}
+.find_agent .agent_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .find_agent .agent_card {
+    padding: auto;
+  }
+}
+.find_agent .agent_card .thumbnail {
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.find_agent .agent_card .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.find_agent .agent_card .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.find_agent .agent_card .details h3 {
+  color: #409fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+}
+.find_agent .agent_card .details h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+}
+.find_agent .agent_card .details p {
+  color: #636363;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+.find_agent .agent_card .details a {
+  color: #409fff;
+}
+
+.faq {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.faq .faq_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+  margin: 4rem auto;
+  gap: 1rem;
+}
+@media (max-width: 767px) {
+  .faq .faq_container {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=app.module.css.map */

@@ -58,6 +58,23 @@
     position: relative;
     margin-top: 2rem;
     color: $accent;
+    text-align: left;
+    &.center {
+      text-align: center;
+      margin: 0 auto;
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &.right {
+      text-align: right;
+      margin-left: auto;
+      &::before {
+        left: auto;
+        right: 0;
+      }
+    }
 
     &::before {
       content: "";
@@ -67,6 +84,16 @@
       position: absolute;
       top: -1.5rem;
       left: 0;
+    }
+  }
+
+  .section_desc {
+    position: relative;
+    display: flex;
+
+    span {
+      color: $primary;
+      margin: 0 0.75ch;
     }
   }
 }

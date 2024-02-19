@@ -1,4 +1,11 @@
-import { AboutCompany, Catalogue, Hero, Service } from "../components/home";
+import {
+  AboutCompany,
+  Agents,
+  Catalogue,
+  Faq,
+  Hero,
+  Service,
+} from "../components/home";
 import bgImg from "../assets/img/banner01.jpg";
 import landImg from "../assets/img/land.png";
 import logo from "../assets/icons/logo.png";
@@ -82,6 +89,8 @@ function Home() {
       <AboutCompany logo={logo} content={services} />
       <Catalogue products={products} />
       <Service />
+      <Agents />
+      <Faq />
     </>
   );
 }

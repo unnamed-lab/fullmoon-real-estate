@@ -269,8 +269,7 @@
     .catalogue_menu {
       display: flex;
       gap: 3rem;
-      // grid-template-columns: repeat(3, 1fr);
-      // align-items: stretch;
+
       @include responsive(mobile) {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -493,14 +492,102 @@
         text-transform: uppercase;
 
         a {
-          color: $white;
-        }
-
-        span {
+          width: 100%;
           display: flex;
-          margin-left: auto;
+          color: $white;
+
+          span {
+            display: flex;
+            margin-left: auto;
+          }
         }
       }
+    }
+  }
+}
+
+.find_agent {
+  .agent_gallery {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem auto;
+  }
+  .agent_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+
+    @include responsive(mobile) {
+      padding: auto;
+    }
+
+    .thumbnail {
+      position: relative;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      h3 {
+        color: $primary;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+      }
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+      }
+      p {
+        color: $text-light;
+        margin-bottom: 1rem;
+        font-weight: 300;
+      }
+      a {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.faq {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  .faq_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin: 4rem auto;
+    gap: 1rem;
+
+    @include responsive(mobile) {
+      width: 100%;
     }
   }
 }
