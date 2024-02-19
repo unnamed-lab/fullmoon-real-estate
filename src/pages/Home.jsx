@@ -1,5 +1,6 @@
 import { Catalogue, Hero, Service } from "../components/home";
 import bgImg from "../assets/img/banner01.jpg";
+import landImg from "../assets/img/land.png";
 import logo from "../assets/icons/logo.png";
 import { SearchField } from "../components/forms";
 
@@ -33,6 +34,9 @@ function Home() {
         "Treasure island estate phase 1 extension more than 200 housing units are projected for delivery in the scheme.",
       price: 2000000,
       size: "600sqm",
+      thumbnail: landImg,
+      isAvailable: true,
+      hotOffer: false,
     },
     {
       title: "Residential land for sale ",
@@ -41,6 +45,9 @@ function Home() {
         "Treasure island estate phase 1 extension more than 200 housing units are projected for delivery in the scheme.",
       price: 2000000,
       size: "600sqm",
+      thumbnail: landImg,
+      isAvailable: true,
+      hotOffer: true,
     },
     {
       title: "Residential land for sale ",
@@ -49,6 +56,31 @@ function Home() {
         "Treasure island estate phase 1 extension more than 200 housing units are projected for delivery in the scheme.",
       price: 2000000,
       size: "600sqm",
+      thumbnail: landImg,
+      isAvailable: true,
+      hotOffer: false,
+    },
+    {
+      title: "Residential land for sale ",
+      location: "Lekki phase 2 by emerald estate",
+      description:
+        "Treasure island estate phase 1 extension more than 200 housing units are projected for delivery in the scheme.",
+      price: 2000000,
+      size: "600sqm",
+      thumbnail: landImg,
+      isAvailable: true,
+      hotOffer: false,
+    },
+    {
+      title: "Residential land for sale ",
+      location: "Lekki phase 2 by emerald estate",
+      description:
+        "Treasure island estate phase 1 extension more than 200 housing units are projected for delivery in the scheme.",
+      price: 2000000,
+      size: "600sqm",
+      thumbnail: landImg,
+      isAvailable: true,
+      hotOffer: false,
     },
   ];
 

@@ -267,12 +267,111 @@
     }
 
     .catalogue_menu {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      align-items: stretch;
+      display: flex;
+      gap: 3rem;
+      // grid-template-columns: repeat(3, 1fr);
+      // align-items: stretch;
 
       .catalogue_item {
-        
+        flex: 25%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 4px 2px #00000008;
+        border-radius: 6px;
+        padding-bottom: 1.5rem;
+        overflow: hidden;
+
+        .thumbnail {
+          position: relative;
+          aspect-ratio: 1/1;
+          overflow: hidden;
+          margin-bottom: 1rem;
+
+          .badge {
+            z-index: 10;
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            top: 1rem;
+            width: -webkit-fill-available;
+            padding: 0.25rem 1.25rem;
+            gap: 0.25rem;
+
+            span {
+              border-radius: 2px;
+              padding: 8px 0.6rem;
+              background-color: rgba($color: $black, $alpha: 0.65);
+              font-size: 10px;
+              font-weight: 400;
+              line-height: 11px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: $white;
+              text-transform: uppercase;
+
+              &.hot {
+                background-color: rgba($color: $secondary, $alpha: 0.9);
+              }
+            }
+          }
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        h4 {
+          margin-block-start: 0;
+          margin-block-end: 0.75em;
+          font-weight: 700;
+          line-height: 11px;
+          color: $secondary;
+        }
+
+        .catalogue_item_title {
+          display: flex;
+          align-items: center;
+          font-size: 0.875rem;
+          font-weight: 500;
+          line-height: 15px;
+
+          span {
+            display: flex;
+            align-items: center;
+            margin-right: 0.45rem;
+          }
+        }
+
+        .catalogue_item_detail {
+          display: flex;
+          align-items: center;
+          font-family: Poppins;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 11px;
+          text-transform: capitalize;
+
+          span {
+            &:nth-child(2n) {
+              margin-left: auto;
+              font-family: Poppins;
+              font-size: 1.25rem;
+              font-weight: 700;
+              line-height: 11px;
+              color: $primary;
+              font-variant-numeric: tabular-num;
+            }
+          }
+        }
+
+        p {
+          margin-bottom: 0.75rem;
+        }
       }
     }
   }
