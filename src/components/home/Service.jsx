@@ -13,7 +13,7 @@ function Service() {
   ];
   return (
     <section className={styles.service_showcase}>
-      <div>
+      <div className={styles.header}>
         <h3>Service</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit

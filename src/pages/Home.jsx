@@ -9,6 +9,9 @@ import {
 import bgImg from "../assets/img/banner01.jpg";
 import landImg from "../assets/img/land.png";
 import logo from "../assets/icons/logo.png";
+import mouseIcon from "../assets/icons/mouse.svg";
+import userIcon from "../assets/icons/user.svg";
+import clockIcon from "../assets/icons/clock.svg";
 import { SearchField } from "../components/forms";
 
 function Home() {
@@ -17,19 +20,19 @@ function Home() {
       title: "OPERATIONAL EXCELLENCE",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus necullamcorper mattis, pulvinar dapibus leo.",
-      icon: "",
+      icon: mouseIcon,
     },
     {
       title: "CONTINUOUS IMPROVEMENT",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus necullamcorper mattis, pulvinar dapibus leo.",
-      icon: "",
+      icon: clockIcon,
     },
     {
       title: "INNOVATIVE SOLUTIONS",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus necullamcorper mattis, pulvinar dapibus leo.",
-      icon: "",
+      icon: userIcon,
     },
   ];
 

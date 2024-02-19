@@ -12,7 +12,7 @@ function Accordion({ header, content }) {
       }}
     >
       <div className={"header"}>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <p>{header}</p>
         <span className={active ? "active" : ""}>
           <svg
             width="15"
@@ -28,12 +28,7 @@ function Accordion({ header, content }) {
           </svg>
         </span>
       </div>
-      <div className={`content ${active ? "show" : ""}`}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-        reiciendis, provident temporibus atque sint illum aspernatur aperiam
-        incidunt esse recusandae rerum numquam tempore saepe quasi vero dolores
-        perspiciatis quas impedit?
-      </div>
+      <div className={`content ${active ? "show" : ""}`}>{content}</div>
     </div>
   );
 }

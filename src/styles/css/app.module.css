@@ -199,19 +199,26 @@
   height: 90px;
 }
 .service_brief .service_row .service_menu .item_service .icon_placeholder span {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 60px;
   height: 60px;
   border-radius: 60%;
-  background-color: #ffffff;
   box-shadow: 5px 7px 15px #d3d3d3;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .service_brief .service_row .service_menu .item_service .icon_placeholder span {
     margin: 1rem auto;
   }
+}
+.service_brief .service_row .service_menu .item_service .icon_placeholder span img {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .service_brief .service_row .service_menu .item_service h4 {
   width: 80%;
@@ -366,16 +373,34 @@
     gap: 4rem;
   }
 }
-.service_showcase h3 {
+.service_showcase .header {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .service_showcase .header {
+    width: 100%;
+  }
+}
+.service_showcase .header h3 {
   color: #00335a;
 }
-.service_showcase p {
+.service_showcase .header p {
   width: 70%;
   margin-bottom: 2.5rem;
 }
 @media (max-width: 767px) {
-  .service_showcase p {
+  .service_showcase .header p {
     width: 100%;
+  }
+}
+.service_showcase .header button {
+  width: 70%;
+  margin: 1.25rem 0;
+}
+@media (max-width: 767px) {
+  .service_showcase .header button {
+    margin: 0.75rem auto;
   }
 }
 .service_showcase .gallery {
@@ -474,7 +499,7 @@
   grid-template-columns: repeat(4, 1fr);
   padding: 2rem auto;
 }
-.find_agent .agent_card {
+.find_agent .agent_gallery .agent_card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -482,11 +507,11 @@
   align-items: center;
 }
 @media (max-width: 767px) {
-  .find_agent .agent_card {
+  .find_agent .agent_gallery .agent_card {
     padding: auto;
   }
 }
-.find_agent .agent_card .thumbnail {
+.find_agent .agent_gallery .agent_card .thumbnail {
   position: relative;
   overflow: hidden;
   width: 150px;
@@ -495,7 +520,7 @@
   border-radius: 50%;
   margin-bottom: 1rem;
 }
-.find_agent .agent_card .thumbnail img {
+.find_agent .agent_gallery .agent_card .thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -504,31 +529,31 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.find_agent .agent_card .details {
+.find_agent .agent_gallery .agent_card .details {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.find_agent .agent_card .details h3 {
+.find_agent .agent_gallery .agent_card .details h3 {
   color: #409fff;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 25px;
   letter-spacing: 0em;
 }
-.find_agent .agent_card .details h4 {
+.find_agent .agent_gallery .agent_card .details h4 {
   font-size: 1rem;
   font-weight: 400;
   line-height: 25px;
   letter-spacing: 0em;
 }
-.find_agent .agent_card .details p {
+.find_agent .agent_gallery .agent_card .details p {
   color: #636363;
   margin-bottom: 1rem;
   font-weight: 300;
 }
-.find_agent .agent_card .details a {
+.find_agent .agent_gallery .agent_card .details a {
   color: #409fff;
 }
 
@@ -542,7 +567,7 @@
   justify-content: center;
   width: 70%;
   margin: 4rem auto;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 @media (max-width: 767px) {
   .faq .faq_container {
