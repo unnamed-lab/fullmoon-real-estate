@@ -1,7 +1,7 @@
 import styles from "../../styles/css/app.module.css";
-function Hero({ bgImg, customStyles = {}, children }) {
+function Hero({ bgImg, customStyles, children }) {
   return (
-    <section className={styles.hero} style={{ customStyles }}>
+    <section className={styles.hero} style={customStyles}>
       <div className={styles.hero_content}>{children}</div>
       <div className={styles.bgWave}>
         <svg

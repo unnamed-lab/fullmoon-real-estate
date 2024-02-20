@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import styles from "../../styles/css/app.module.css";
 import { useState } from "react";
 
 function Accordion({ header, content }) {

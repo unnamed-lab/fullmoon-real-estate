@@ -53,13 +53,31 @@
   text-align: center;
   color: $secondary;
   background-color: transparent;
-  margin: 0 .25rem;
+  margin: 0 0.25rem;
   transition: background-color 300ms linear;
 
   &:focus {
-    background-color: rgba($color: $secondary, $alpha: .1);
+    background-color: rgba($color: $secondary, $alpha: 0.1);
   }
   &:hover {
-    background-color: rgba($color: $secondary, $alpha: .05);
+    background-color: rgba($color: $secondary, $alpha: 0.05);
   }
+}
+
+.btn-top {
+  cursor: pointer;
+  position: fixed;
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  padding: 13px;
+  right: 2%;
+  bottom: 5%;
+  background-color: $primary;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .9;
+  z-index: 99;
 }
