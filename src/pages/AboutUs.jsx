@@ -1,6 +1,6 @@
 import { Hero } from "../components/home";
 import bgImg from "../assets/img/banner01.jpg";
-import { Intro, ServiceAbout, Team } from "../components/about";
+import { Intro, ServiceAbout, Team, Testimonial } from "../components/about";
 
 function AboutUs() {
   return (
@@ -38,6 +38,7 @@ function AboutUs() {
       </Intro>
       <Team />
       <ServiceAbout />
+      <Testimonial />
     </>
   );
 }
