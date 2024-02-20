@@ -877,4 +877,25 @@
   object-fit: cover;
 }
 
+.contact {
+  margin: 5% 0;
+  gap: 1rem;
+}
+@media (max-width: 767px) {
+  .contact {
+    margin: 10dvh 2dvw;
+  }
+}
+.contact .name_group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 767px) {
+  .contact .name_group {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0rem;
+  }
+}
+
 /*# sourceMappingURL=app.module.css.map */

@@ -79,6 +79,68 @@
       }
     }
   }
+
+  &.input_container {
+    margin-bottom: 3rem;
+    label {
+      width: 100%;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: $accent;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+
+      @include responsive(mobile) {
+        margin-bottom: 0.5rem;
+      }
+
+      span {
+        color: $secondary;
+      }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    textarea {
+      font-family: Poppins, sans-serif;
+      width: 100%;
+      border-radius: 1px;
+      border: none;
+      box-shadow: 0px 0px 0px 0.5px $g-600;
+      padding: 1rem 1.5rem;
+      color: $g-500;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      &:focus,
+      :focus-visible,
+      :focus-within {
+        outline: none;
+        box-shadow: 0px 0px 2px 1px $primary;
+      }
+
+      &::placeholder {
+        color: rgba($color: $g-600, $alpha: 0.6);
+      }
+    }
+
+    input[type="checkbox"] {
+      border: none;
+      width: 18px;
+      height: 18px;
+      background-color: $g-300;
+      margin-right: 1rem;
+      border-radius: 1px;
+    }
+  }
 }
 
 .accordion {
@@ -137,8 +199,8 @@
       opacity: 1;
 
       @include responsive(mobile) {
-        margin-top: .25rem;
-        margin-bottom: .75rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.75rem;
       }
     }
   }

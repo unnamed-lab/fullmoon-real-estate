@@ -304,6 +304,79 @@
 .input_group .search_group .search_input:focus, .input_group .search_group .search_input:focus-visible {
   outline: none;
 }
+.input_group.input_container {
+  margin-bottom: 3rem;
+}
+.input_group.input_container label {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #00335a;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .input_group.input_container label {
+    margin-bottom: 0.5rem;
+  }
+}
+.input_group.input_container label span {
+  color: #dd3333;
+}
+.input_group.input_container input[type=text],
+.input_group.input_container input[type=email],
+.input_group.input_container input[type=password],
+.input_group.input_container input[type=search],
+.input_group.input_container textarea {
+  font-family: Poppins, sans-serif;
+  width: 100%;
+  border-radius: 1px;
+  border: none;
+  box-shadow: 0px 0px 0px 0.5px #cdd1d4;
+  padding: 1rem 1.5rem;
+  color: #222222;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.input_group.input_container input[type=text]:focus,
+.input_group.input_container input[type=text] :focus-visible,
+.input_group.input_container input[type=text] :focus-within,
+.input_group.input_container input[type=email]:focus,
+.input_group.input_container input[type=email] :focus-visible,
+.input_group.input_container input[type=email] :focus-within,
+.input_group.input_container input[type=password]:focus,
+.input_group.input_container input[type=password] :focus-visible,
+.input_group.input_container input[type=password] :focus-within,
+.input_group.input_container input[type=search]:focus,
+.input_group.input_container input[type=search] :focus-visible,
+.input_group.input_container input[type=search] :focus-within,
+.input_group.input_container textarea:focus,
+.input_group.input_container textarea :focus-visible,
+.input_group.input_container textarea :focus-within {
+  outline: none;
+  box-shadow: 0px 0px 2px 1px #409fff;
+}
+.input_group.input_container input[type=text]::placeholder,
+.input_group.input_container input[type=email]::placeholder,
+.input_group.input_container input[type=password]::placeholder,
+.input_group.input_container input[type=search]::placeholder,
+.input_group.input_container textarea::placeholder {
+  color: rgba(205, 209, 212, 0.6);
+}
+.input_group.input_container input[type=checkbox] {
+  border: none;
+  width: 18px;
+  height: 18px;
+  background-color: #d5d8dc;
+  margin-right: 1rem;
+  border-radius: 1px;
+}
 
 .accordion {
   cursor: pointer;
