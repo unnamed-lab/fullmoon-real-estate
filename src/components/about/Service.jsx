@@ -2,7 +2,7 @@ import styles from "../../styles/css/app.module.css";
 import room01 from "../../assets/img/room01.jpg";
 import room02 from "../../assets/img/room02.jpg";
 import room03 from "../../assets/img/room03.jpg";
-function Service() {
+function Service({header, headerStyle}) {
   const services = [
     {
       title: "Real Estate Consulting",
@@ -22,7 +22,7 @@ function Service() {
   ];
   return (
     <section className={styles.about_service}>
-      <h3>Services</h3>
+      <h3 style={headerStyle}>{header || "Services"}</h3>
       <ul className={styles.about_service_gallery}>
         {services?.map((el, index) => {
           return (
