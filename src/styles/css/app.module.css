@@ -878,12 +878,12 @@
 }
 
 .contact {
-  margin: 5% 0;
+  margin: 2% 0;
   gap: 1rem;
 }
 @media (max-width: 767px) {
   .contact {
-    margin: 10dvh 2dvw;
+    margin: 7.5dvh 2dvw;
   }
 }
 .contact .name_group {

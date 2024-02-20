@@ -2,11 +2,11 @@
 @use "../components/mixins" as *;
 
 .contact {
-  margin: 5% 0;
+  margin: 2% 0;
   gap: 1rem;
 
   @include responsive(mobile) {
-    margin: 10dvh 2dvw;
+    margin: 7.5dvh 2dvw;
   }
   .name_group {
     display: grid;

@@ -305,7 +305,7 @@
   outline: none;
 }
 .input_group.input_container {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .input_group.input_container label {
   width: 100%;
@@ -316,11 +316,11 @@
   text-align: left;
   color: #00335a;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 @media (max-width: 767px) {
   .input_group.input_container label {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.33rem;
   }
 }
 .input_group.input_container label span {

@@ -81,7 +81,7 @@
   }
 
   &.input_container {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     label {
       width: 100%;
       font-size: 30px;
@@ -91,10 +91,10 @@
       text-align: left;
       color: $accent;
       text-transform: uppercase;
-      margin-bottom: 1rem;
+      margin-bottom: .75rem;
 
       @include responsive(mobile) {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.33rem;
       }
 
       span {

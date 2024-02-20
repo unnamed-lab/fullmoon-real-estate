@@ -6,7 +6,7 @@ function Nav() {
   const navMenu = [
     { title: "home", url: "/" },
     { title: "about", url: "/about" },
-    { title: "buy", url: "/" },
+    { title: "buy", url: "/buy" },
     { title: "services", url: "/service" },
     { title: "contact", url: "/contact" },
   ];

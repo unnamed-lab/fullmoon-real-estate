@@ -4,7 +4,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Applayout from "../components/layout/Applayout";
-import { About, Contact, Home, Service } from "../pages";
+import { About, Buy, Contact, Home, Service } from "../pages";
 import Error from "../components/layout/Error";
 
 export const routes = createBrowserRouter(
@@ -15,6 +15,7 @@ export const routes = createBrowserRouter(
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<About />} />
         <Route path="service" element={<Service />} />
+        <Route path="buy" element={<Buy />} />
       </Route>
     </Route>
   ),
