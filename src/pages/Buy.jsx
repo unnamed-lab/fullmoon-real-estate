@@ -60,10 +60,15 @@ function Buy() {
   return (
     <>
       <MetaTags
-        title={"Buy Your Landed Properties"}
+        title={
+          "Buy Your Landed Properties With Great Ease - Fullmoon Real Estate"
+        }
         desc={
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta ducimus aliquid, asperiores praesentium fugiat?"
         }
+
+        index={false}
+        follow={false}
       />
       <Hero
         backdrop={false}

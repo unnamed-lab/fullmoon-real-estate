@@ -31,7 +31,6 @@ function Hero({
           src={bgImg}
           width={"1024px"}
           height={"780px"}
-          loading="lazy"
           alt="Welcome to Fullmoon Real Estate"
           title="Welcome to Fullmoon Real Estate"
         />

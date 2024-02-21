@@ -94,10 +94,14 @@ function Home() {
   return (
     <>
       <MetaTags
-        title={"Fullmoon Real Estate"}
+        title={
+          "Fullmoon Real Estate - Build your dream home on the finest property"
+        }
         desc={
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta ducimus aliquid, asperiores praesentium fugiat?"
         }
+        index={true}
+        follow={true}
       />
       <Hero bgImg={bgImg}>
         <h1>Build your dream home on the finest property</h1>
