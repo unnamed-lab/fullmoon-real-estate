@@ -13,8 +13,15 @@ import mouseIcon from "../assets/icons/mouse.svg";
 import userIcon from "../assets/icons/user.svg";
 import clockIcon from "../assets/icons/clock.svg";
 import { SearchField } from "../components/forms";
+import { useOutletContext } from "react-router-dom";
+import { useEffect } from "react";
 
 function Home() {
+
+  const [setCustomNav] = useOutletContext();
+  useEffect(() => {
+    setCustomNav("");
+  });
   const services = [
     {
       title: "OPERATIONAL EXCELLENCE",

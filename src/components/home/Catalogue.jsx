@@ -1,18 +1,23 @@
 import styles from "../../styles/css/app.module.css";
-function Catalogue({ products }) {
+import { numberToText } from "../../utils/utils";
+function Catalogue({ products, customStyles, header = true }) {
   return (
     <section className={styles.catalogue}>
-      <h2 className="section_header">Discover new lands</h2>
+      {header ? <h2 className="section_header">Discover new lands</h2> : ""}
       <div className={styles.catalogue_container}>
-        <div className={styles.catalogue_controller}>
-          <button type="button" className="btn-non">
-            Prev
-          </button>
-          <button type="button" className="btn-non">
-            Next
-          </button>
-        </div>
-        <div className={styles.catalogue_menu}>
+        {header ? (
+          <div className={styles.catalogue_controller}>
+            <button type="button" className="btn-non">
+              Prev
+            </button>
+            <button type="button" className="btn-non">
+              Next
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
+        <div className={styles.catalogue_menu} style={customStyles}>
           {products?.map((el, index) => {
             return (
               <div key={index} className={styles.catalogue_item}>
@@ -27,7 +32,7 @@ function Catalogue({ products }) {
                   </div>
                   <img src={el?.thumbnail} alt={el.title} />
                 </div>
-                <div style={{ padding:".5rem 1.25rem" }}>
+                <div style={{ padding: ".5rem 1.25rem" }}>
                   <h4>{el.title}</h4>
                   <div className={styles.catalogue_item_title}>
                     <span>
@@ -53,7 +58,7 @@ function Catalogue({ products }) {
                   <p>{el.description}</p>
                   <div className={styles.catalogue_item_detail}>
                     <span>land size : {el.size}</span>
-                    <span>N{el.price}</span>
+                    <span>N{numberToText(el.price)}</span>
                   </div>
                 </div>
               </div>

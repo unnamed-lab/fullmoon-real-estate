@@ -1,7 +1,13 @@
 import { Hero } from "../components/home";
 import bgImg from "../assets/img/banner01.jpg";
-import { ServiceAbout, Team, Testimonial } from "../components/about";
+import { ServiceAbout, Testimonial } from "../components/about";
+import { useOutletContext } from "react-router-dom";
+import { useEffect } from "react";
 function Service() {
+  const [setCustomNav] = useOutletContext();
+  useEffect(() => {
+    setCustomNav("");
+  });
   return (
     <>
       <Hero bgImg={bgImg} customStyles={{ height: 40 + "dvh" }}>

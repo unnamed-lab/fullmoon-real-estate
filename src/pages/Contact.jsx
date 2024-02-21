@@ -2,8 +2,14 @@ import { Hero } from "../components/home";
 import bgImg from "../assets/img/banner01.jpg";
 import styles from "../styles/css/app.module.css";
 import { InputField } from "../components/forms";
+import { useOutletContext } from "react-router-dom";
+import { useEffect } from "react";
 
 function Contact() {
+  const [setCustomNav] = useOutletContext();
+  useEffect(() => {
+    setCustomNav("");
+  });
   return (
     <>
       <Hero bgImg={bgImg} customStyles={{ height: 40 + "dvh" }}>
