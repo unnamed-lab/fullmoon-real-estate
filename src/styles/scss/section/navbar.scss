@@ -22,27 +22,86 @@
     height: clamp(60px, 80px, 120px);
   }
 
+  .nav_menu_backdrop {
+    display: none;
+
+    @include responsive(mobile) {
+      z-index: 75;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100dvw;
+      height: 100%;
+
+      &.hide {
+        position: fixed;
+        display: none;
+      }
+    }
+  }
+
   .nav_menu {
+    z-index: 80;
     display: flex;
     list-style: none;
     text-transform: uppercase;
     margin-left: auto;
     gap: 2rem;
     @include responsive(mobile) {
-      display: none;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      right: -100%;
+      background-color: $white;
+      transition: right 500ms ease;
+      gap: 3rem;
+      width: 60dvw;
+      height: 100%;
+      top: -5px;
+
+      &.show {
+        right: 0;
+      }
     }
 
     li {
       font-size: 0.875rem;
+
+      @include responsive(mobile) {
+        font-size: 1.25rem;
+      }
+
       a {
         color: $white;
         font-weight: 600;
         transition: all 500ms ease;
 
+        @include responsive(mobile) {
+          color: $black;
+        }
         &:hover {
           color: $primary;
         }
       }
+    }
+  }
+  .nav_toggle {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+
+    @include responsive(mobile) {
+      display: block;
+      margin-left: auto;
+      margin-right: 1rem;
     }
   }
 }

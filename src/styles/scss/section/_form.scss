@@ -52,7 +52,7 @@
     border-radius: 40px;
     padding: 1rem;
     @include responsive(mobile) {
-      width: 100%;
+      width: -webkit-fill-available;
       padding: 0.85rem;
     }
 
@@ -91,7 +91,7 @@
       text-align: left;
       color: $accent;
       text-transform: uppercase;
-      margin-bottom: .75rem;
+      margin-bottom: 0.75rem;
 
       @include responsive(mobile) {
         margin-bottom: 0.33rem;
@@ -133,6 +133,7 @@
     }
 
     input[type="checkbox"] {
+      cursor: pointer;
       border: none;
       width: 18px;
       height: 18px;
