@@ -23,7 +23,7 @@
 }
 @media (max-width: 767px) {
   .btn.big {
-    padding: 0.875rem 2rem;
+    padding: 0.875rem 0.5rem;
   }
 }
 .btn.primary {
@@ -279,7 +279,7 @@
 }
 @media (max-width: 767px) {
   .input_group .search_group {
-    width: 100%;
+    width: -webkit-fill-available;
     padding: 0.85rem;
   }
 }
@@ -370,6 +370,7 @@
   color: rgba(205, 209, 212, 0.6);
 }
 .input_group.input_container input[type=checkbox] {
+  cursor: pointer;
   border: none;
   width: 18px;
   height: 18px;
