@@ -3,7 +3,7 @@ import logo from "../../assets/icons/logo.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function Nav() {
+function Nav({ customColor }) {
   const [activeNav, setNav] = useState(false);
   const navMenu = [
     { title: "home", url: "/" },
@@ -33,7 +33,7 @@ function Nav() {
           >
             <path
               d="M3.25 6.5H22.75M3.25 13H22.75M3.25 19.5H22.75"
-              stroke="white"
+              stroke={customColor || "white"}
               strokeWidth="2.8"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -44,7 +44,9 @@ function Nav() {
           {navMenu?.map((el, index) => {
             return (
               <li key={index} className="nav_option">
-                <Link to={el.url}>{el.title}</Link>
+                <Link to={el.url} style={{ color: customColor || "white" }}>
+                  {el.title}
+                </Link>
               </li>
             );
           })}

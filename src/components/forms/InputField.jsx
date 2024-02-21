@@ -5,6 +5,7 @@ function InputField({
   placeholder,
   customStyles,
   required = false,
+  onChange,
 }) {
   const labelId = label.toLowerCase().split(" ").join("");
   const inputType = (type) => {
@@ -23,6 +24,7 @@ function InputField({
             labelId={labelId}
             customStyles={customStyles}
             required={required}
+            onChange={onChange}
           />
         );
 
@@ -36,6 +38,7 @@ function InputField({
             labelId={labelId}
             customStyles={customStyles}
             required={required}
+            onChange={onChange}
           />
         );
     }
@@ -52,7 +55,15 @@ function InputField({
   );
 }
 
-function TextBox({ type, name, placeholder, labelId, customStyles, required }) {
+function TextBox({
+  type,
+  name,
+  placeholder,
+  labelId,
+  customStyles,
+  required,
+  onChange,
+}) {
   switch (type) {
     case "text":
     case "password":
@@ -67,6 +78,7 @@ function TextBox({ type, name, placeholder, labelId, customStyles, required }) {
           style={customStyles}
           required={required}
           autoComplete={name}
+          onChange={onChange}
         />
       );
     case "textbox":
@@ -80,6 +92,7 @@ function TextBox({ type, name, placeholder, labelId, customStyles, required }) {
           placeholder={placeholder}
           required={required}
           style={customStyles}
+          onChange={onChange}
         ></textarea>
       );
   }
@@ -92,19 +105,32 @@ function SelectBox({
   labelId,
   customStyles,
   required,
+  onChange,
 }) {
   switch (type) {
     case "radio":
       return (
         <div style={customStyles}>
-          <input type="radio" name={name} id={labelId} required={required} />{" "}
+          <input
+            type="radio"
+            name={name}
+            id={labelId}
+            required={required}
+            onChange={onChange}
+          />{" "}
           {placeholder}
         </div>
       );
     case "checkbox":
       return (
         <div style={customStyles}>
-          <input type="checkbox" name={name} id={labelId} required={required} />{" "}
+          <input
+            type="checkbox"
+            name={name}
+            id={labelId}
+            required={required}
+            onChange={onChange}
+          />{" "}
           {placeholder}
         </div>
       );

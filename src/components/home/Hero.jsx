@@ -1,8 +1,10 @@
 import styles from "../../styles/css/app.module.css";
-function Hero({ bgImg, customStyles, children }) {
+function Hero({ bgImg, backdrop = true, customStyles, customContainerStyles, children }) {
   return (
     <section className={styles.hero} style={customStyles}>
-      <div className={styles.hero_content}>{children}</div>
+      <div className={styles.hero_content} style={customContainerStyles}>
+        {children}
+      </div>
       <div className={styles.bgWave}>
         <svg
           width="1440"
@@ -17,8 +19,8 @@ function Hero({ bgImg, customStyles, children }) {
           />
         </svg>
       </div>
-      <div className={styles.bgBackdrop}></div>
-      <img src={bgImg} alt="Welcome to Fullmoon Real Estate" />
+      {backdrop ? <div className={styles.bgBackdrop}></div> : ""}
+      {bgImg ? <img src={bgImg} alt="Welcome to Fullmoon Real Estate" /> : ""}
       <div className={styles.bgPattern}>
         <svg
           width="286"

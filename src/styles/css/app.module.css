@@ -225,10 +225,11 @@
   }
 }
 .service_brief .service_row .service_menu .item_service .icon_placeholder span img {
+  display: none;
   position: absolute;
-  top: -5px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 .service_brief .service_row .service_menu .item_service h4 {
   width: 80%;
@@ -507,7 +508,7 @@
 .find_agent .agent_gallery {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr);
-  padding: 2rem auto;
+  padding: 2rem 0;
 }
 .find_agent .agent_gallery .agent_card {
   position: relative;
