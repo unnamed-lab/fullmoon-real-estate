@@ -90,6 +90,7 @@
       }
     }
 
+    h2,
     h3,
     h4,
     h5,
@@ -99,6 +100,7 @@
       font-weight: 600;
       line-height: 62px;
       letter-spacing: 8.5px;
+      text-align: center;
     }
 
     form {
@@ -116,6 +118,7 @@
   margin-bottom: 4rem;
   gap: 1rem;
 
+  h2,
   h3 {
     text-align: center;
     color: $accent;
@@ -242,6 +245,7 @@
             }
           }
         }
+        h3,
         h4 {
           width: 80%;
           text-transform: uppercase;
@@ -349,11 +353,12 @@
           }
         }
 
+        h3,
         h4 {
+          font-size: 0.95rem;
           margin-block-start: 0;
           margin-block-end: 0.75em;
           font-weight: 700;
-          line-height: 11px;
           color: $secondary;
         }
 
@@ -420,6 +425,7 @@
       width: 100%;
     }
 
+    h2,
     h3 {
       color: $accent;
     }
@@ -483,6 +489,7 @@
         }
       }
 
+      h4,
       h5 {
         z-index: 12;
         width: 80%;
@@ -586,6 +593,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        h2,
         h3 {
           color: $primary;
           font-size: 1.1rem;

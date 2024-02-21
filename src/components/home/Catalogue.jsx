@@ -30,10 +30,17 @@ function Catalogue({ products, customStyles, header = true }) {
                       ""
                     )}
                   </div>
-                  <img src={el?.thumbnail} alt={el.title} />
+                  <img
+                    src={el?.thumbnail}
+                    width={"200px"}
+                    height={"200px"}
+                    loading="lazy"
+                    alt={el.title}
+                    title={el.title}
+                  />
                 </div>
                 <div style={{ padding: ".5rem 1.25rem" }}>
-                  <h4>{el.title}</h4>
+                  <h3>{el.title}</h3>
                   <div className={styles.catalogue_item_title}>
                     <span>
                       <svg

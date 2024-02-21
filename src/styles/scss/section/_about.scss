@@ -5,6 +5,7 @@
   display: block;
   margin-bottom: 5%;
 
+  h2,
   h3 {
     text-transform: uppercase;
     color: $accent;
@@ -34,6 +35,7 @@
   background-color: rgba($color: $accent2, $alpha: 0.1);
   padding: 2% 12% !important;
 
+  h2,
   h3 {
     text-transform: uppercase;
     color: $g-500;
@@ -136,6 +138,7 @@
     margin-top: 10%;
     margin-bottom: 15%;
   }
+  h2,
   h3 {
     text-transform: uppercase;
     color: $accent;
@@ -231,6 +234,7 @@
     margin-top: 10%;
     margin-bottom: 20dvh;
   }
+  h2,
   h3 {
     text-transform: uppercase;
     color: $accent;

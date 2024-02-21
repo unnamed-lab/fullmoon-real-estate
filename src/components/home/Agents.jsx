@@ -48,7 +48,14 @@ function Agents() {
           return (
             <div key={index} className={styles.agent_card}>
               <div className={styles.thumbnail}>
-                <img src={el.img} alt="" />
+                <img
+                  src={el.img}
+                  width={"150px"}
+                  height={"150px"}
+                  loading="lazy"
+                  alt={el.name}
+                  title={el.name}
+                />
               </div>
               <div className={styles.details}>
                 <h3>{el.name}</h3>

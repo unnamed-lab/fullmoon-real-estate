@@ -2,7 +2,7 @@ import styles from "../../styles/css/app.module.css";
 import room01 from "../../assets/img/room01.jpg";
 import room02 from "../../assets/img/room02.jpg";
 import room03 from "../../assets/img/room03.jpg";
-function Service({header, headerStyle}) {
+function Service({ header, headerStyle }) {
   const services = [
     {
       title: "Real Estate Consulting",
@@ -29,7 +29,14 @@ function Service({header, headerStyle}) {
             <li key={index}>
               <div className={styles.thumbnail}>
                 <p>{el.title}</p>
-                <img src={el.img} alt={el.title} title={el.title} />
+                <img
+                  src={el.img}
+                  alt={el.title}
+                  width={"400px"}
+                  height={"200px"}
+                  title={el.title}
+                  loading="lazy"
+                />
               </div>
               <p>{el.desc}</p>
             </li>

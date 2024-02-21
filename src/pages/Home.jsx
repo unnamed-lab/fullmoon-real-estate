@@ -15,9 +15,10 @@ import clockIcon from "../assets/icons/clock.svg";
 import { SearchField } from "../components/forms";
 import { useOutletContext } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+import MetaTags from "../components/seo/MetaTags";
 
 function Home() {
-
   const [setCustomNav] = useOutletContext();
   useEffect(() => {
     setCustomNav("");
@@ -92,6 +93,12 @@ function Home() {
 
   return (
     <>
+      <MetaTags
+        title={"Fullmoon Real Estate"}
+        desc={
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta ducimus aliquid, asperiores praesentium fugiat?"
+        }
+      />
       <Hero bgImg={bgImg}>
         <h1>Build your dream home on the finest property</h1>
         <SearchField />
