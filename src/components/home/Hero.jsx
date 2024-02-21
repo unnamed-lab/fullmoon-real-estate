@@ -1,5 +1,11 @@
 import styles from "../../styles/css/app.module.css";
-function Hero({ bgImg, backdrop = true, customStyles, customContainerStyles, children }) {
+function Hero({
+  bgImg,
+  backdrop = true,
+  customStyles,
+  customContainerStyles,
+  children,
+}) {
   return (
     <section className={styles.hero} style={customStyles}>
       <div className={styles.hero_content} style={customContainerStyles}>
@@ -20,7 +26,18 @@ function Hero({ bgImg, backdrop = true, customStyles, customContainerStyles, chi
         </svg>
       </div>
       {backdrop ? <div className={styles.bgBackdrop}></div> : ""}
-      {bgImg ? <img src={bgImg} alt="Welcome to Fullmoon Real Estate" /> : ""}
+      {bgImg ? (
+        <img
+          src={bgImg}
+          width={"1024px"}
+          height={"780px"}
+          loading="lazy"
+          alt="Welcome to Fullmoon Real Estate"
+          title="Welcome to Fullmoon Real Estate"
+        />
+      ) : (
+        ""
+      )}
       <div className={styles.bgPattern}>
         <svg
           width="286"

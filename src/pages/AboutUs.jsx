@@ -3,6 +3,7 @@ import bgImg from "../assets/img/banner01.jpg";
 import { Intro, ServiceAbout, Team, Testimonial } from "../components/about";
 import { useOutletContext } from "react-router-dom";
 import { useEffect } from "react";
+import MetaTags from "../components/seo/MetaTags";
 
 function AboutUs() {
   const [setCustomNav] = useOutletContext();
@@ -11,8 +12,23 @@ function AboutUs() {
   });
   return (
     <>
+      <MetaTags
+        title={"Know More About Us"}
+        desc={
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta ducimus aliquid, asperiores praesentium fugiat?"
+        }
+      />
       <Hero bgImg={bgImg} customStyles={{ height: 40 + "dvh" }}>
-        <h3 style={{ textTransform: "uppercase" }}>About Us</h3>
+        <h1
+          style={{
+            textTransform: "uppercase",
+            fontSize: 1.875 + "rem",
+            textAlign: "center",
+            margin: "0 auto",
+          }}
+        >
+          About Us
+        </h1>
       </Hero>
       <Intro>
         <p>

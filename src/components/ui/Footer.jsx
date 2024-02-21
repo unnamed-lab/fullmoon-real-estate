@@ -30,7 +30,14 @@ function Footer() {
         })}
       </ul>
       <Link to={"/"} className="brand_logo">
-        <img src={logo} alt="Fullmoon real estate" />
+        <img
+          src={logo}
+          width={"200px"}
+          height={"200px"}
+          alt="Fullmoon Real Estate"
+          title="Fullmoon Real Estate"
+          loading="lazy"
+        />
       </Link>
       <ul className="list_menu">
         {others?.map((el, index) => {

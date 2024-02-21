@@ -16,7 +16,14 @@ function Nav({ customColor }) {
     <header>
       <nav className="nav">
         <Link to={"/"} className="brand_logo">
-          <img src={logo} alt="Fullmoon Real Estate" />
+          <img
+            src={logo}
+            width={"200px"}
+            height={"200px"}
+            alt="Fullmoon Real Estate"
+            title="Fullmoon Real Estate"
+            loading="lazy"
+          />
         </Link>
         <button
           className="nav_toggle"

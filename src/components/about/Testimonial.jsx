@@ -57,7 +57,14 @@ function Testimonial() {
                 <p className={styles.quote}>{el.quote}</p>
                 <div className={styles.profile}>
                   <div className={styles.profile_img}>
-                    <img src={el.img} alt={el.name} title={el.name} />
+                    <img
+                      src={el.img}
+                      alt={el.name}
+                      width={"150px"}
+                      height={"150px"}
+                      loading="lazy"
+                      title={el.name}
+                    />
                   </div>
                   <div className={styles.profile_info}>
                     <p>

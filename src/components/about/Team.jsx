@@ -38,7 +38,14 @@ function Team() {
                 <h4>{el.name}</h4>
                 <h5>{el.title}</h5>
               </div>
-              <img src={el.img} alt={el.name} />
+              <img
+                src={el.img}
+                width={"260px"}
+                height={"390px"}
+                alt={el.name}
+                title={el.name}
+                loading="lazy"
+              />
             </li>
           );
         })}

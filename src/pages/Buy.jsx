@@ -3,6 +3,7 @@ import { SearchField } from "../components/forms";
 import { Catalogue, Hero } from "../components/home";
 import { useEffect } from "react";
 import landImg from "../assets/img/land.png";
+import MetaTags from "../components/seo/MetaTags";
 
 function Buy() {
   const [setCustomNav] = useOutletContext();
@@ -58,22 +59,29 @@ function Buy() {
   ];
   return (
     <>
+      <MetaTags
+        title={"Buy Your Landed Properties"}
+        desc={
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta ducimus aliquid, asperiores praesentium fugiat?"
+        }
+      />
       <Hero
         backdrop={false}
         customStyles={{ height: 45 + "dvh", justifyContent: "flex-end" }}
         customContainerStyles={{ marginBottom: 1 + "rem" }}
       >
-        <h3
+        <h1
           style={{
             textTransform: "none",
             textAlign: "left",
             margin: 0,
             color: "#00335a",
             letterSpacing: 3 + "px",
+            fontSize: 1.875 + "rem",
           }}
         >
           Discover new lands
-        </h3>
+        </h1>
         <SearchField
           filter={false}
           customStyles={{ width: 100 + "%", padding: "0.25rem 0" }}

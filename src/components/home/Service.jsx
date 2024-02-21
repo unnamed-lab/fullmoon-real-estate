@@ -27,7 +27,7 @@ function Service() {
         {services?.map((el, index) => {
           return (
             <li key={index}>
-              <h5>{el.title}</h5>
+              <h4>{el.title}</h4>
               <div className={styles.more}>
                 <Link to={el.url}>
                   More info
@@ -48,7 +48,14 @@ function Service() {
                 </Link>
               </div>
               <div className={styles.blinder}></div>
-              <img src={el.img} alt={el.title} title={el.title} />
+              <img
+                src={el.img}
+                width={"200px"}
+                height={"200px"}
+                alt={el.title}
+                title={el.title}
+                loading="lazy"
+              />
             </li>
           );
         })}
