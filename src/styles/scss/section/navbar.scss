@@ -1,0 +1,48 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  min-height: 90px;
+  padding: 0.5rem 6rem;
+  width: -webkit-fill-available;
+
+  @include responsive(mobile) {
+    padding: 0.5rem 1rem;
+  }
+  .brand_logo {
+    width: clamp(60px, 80px, 120px);
+    height: clamp(60px, 80px, 120px);
+  }
+
+  .nav_menu {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    margin-left: auto;
+    gap: 2rem;
+    @include responsive(mobile) {
+      display: none;
+    }
+
+    li {
+      font-size: 0.875rem;
+      a {
+        color: $white;
+        font-weight: 600;
+        transition: all 500ms ease;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

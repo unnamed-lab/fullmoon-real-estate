@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Footer, Nav } from "../ui";
+import { Footer, Nav, TopBtn } from "../ui";
 
 function Applayout() {
   return (
@@ -7,6 +7,7 @@ function Applayout() {
       <Nav />
       <Outlet />
       <Footer />
+      <TopBtn />
     </>
   );
 }

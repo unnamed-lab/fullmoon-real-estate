@@ -1,0 +1,47 @@
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  min-height: 90px;
+  padding: 0.5rem 6rem;
+  width: -webkit-fill-available;
+}
+@media (max-width: 767px) {
+  .nav {
+    padding: 0.5rem 1rem;
+  }
+}
+.nav .brand_logo {
+  width: 80px;
+  height: 80px;
+}
+.nav .nav_menu {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  margin-left: auto;
+  gap: 2rem;
+}
+@media (max-width: 767px) {
+  .nav .nav_menu {
+    display: none;
+  }
+}
+.nav .nav_menu li {
+  font-size: 0.875rem;
+}
+.nav .nav_menu li a {
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 500ms ease;
+}
+.nav .nav_menu li a:hover {
+  color: #409fff;
+}
+
+/*# sourceMappingURL=navbar.css.map */
