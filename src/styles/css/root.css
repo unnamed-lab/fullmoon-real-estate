@@ -305,18 +305,18 @@
   outline: none;
 }
 .input_group.input_container {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 .input_group.input_container label {
   width: 100%;
-  font-size: 30px;
+  font-size: 1.75rem;
   font-weight: 500;
   line-height: 27px;
   letter-spacing: 0em;
   text-align: left;
   color: #00335a;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 @media (max-width: 767px) {
   .input_group.input_container label {
@@ -336,7 +336,7 @@
   border-radius: 1px;
   border: none;
   box-shadow: 0px 0px 0px 0.5px #cdd1d4;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   color: #222222;
   font-size: 18px;
   font-weight: 400;

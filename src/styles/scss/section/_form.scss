@@ -81,17 +81,17 @@
   }
 
   &.input_container {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     label {
       width: 100%;
-      font-size: 30px;
+      font-size: 1.75rem;
       font-weight: 500;
       line-height: 27px;
       letter-spacing: 0em;
       text-align: left;
       color: $accent;
       text-transform: uppercase;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
 
       @include responsive(mobile) {
         margin-bottom: 0.33rem;
@@ -112,7 +112,7 @@
       border-radius: 1px;
       border: none;
       box-shadow: 0px 0px 0px 0.5px $g-600;
-      padding: 1rem 1.5rem;
+      padding: .75rem 1.25rem;
       color: $g-500;
       font-size: 18px;
       font-weight: 400;

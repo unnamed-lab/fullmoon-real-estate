@@ -3,7 +3,7 @@ import bgImg from "../assets/img/banner01.jpg";
 import styles from "../styles/css/app.module.css";
 import { InputField } from "../components/forms";
 import { useOutletContext } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Contact() {
   const [setCustomNav] = useOutletContext();
@@ -21,6 +21,14 @@ function Contact() {
 }
 
 function ContactForm() {
+  const [formData, setFormData] = useState({});
+
+  const onInputChange = (e) =>
+    setFormData({
+      ...formData,
+      [e.target.name]:
+        e.target.name === "terms" ? e.target.checked : e.target.value,
+    });
   return (
     <section className={styles.contact}>
       <form
@@ -35,6 +43,7 @@ function ContactForm() {
             label={"First Name"}
             required={true}
             placeholder={"Enter your first name"}
+            onChange={onInputChange}
           />
 
           <InputField
@@ -43,6 +52,7 @@ function ContactForm() {
             label={"Last Name"}
             required={true}
             placeholder={"Enter your last name"}
+            onChange={onInputChange}
           />
         </div>
         <InputField
@@ -51,6 +61,7 @@ function ContactForm() {
           label={"Email"}
           required={true}
           placeholder={"Email"}
+          onChange={onInputChange}
         />
         <InputField
           type={"textarea"}
@@ -58,6 +69,7 @@ function ContactForm() {
           label={"Message"}
           required={true}
           placeholder={"Message"}
+          onChange={onInputChange}
         />
         <InputField
           type={"checkbox"}
@@ -67,7 +79,7 @@ function ContactForm() {
           placeholder={
             "I consent to having this website store my submitted information"
           }
-          customStyles={{ display: "flex", alignItems: "center" }}
+          onChange={onInputChange}
         />
         <button
           type="submit"
