@@ -51,7 +51,7 @@ function Nav({ customColor }) {
           {navMenu?.map((el, index) => {
             return (
               <li key={index} className="nav_option">
-                <Link to={el.url} style={{ color: customColor || "white" }}>
+                <Link to={el.url} className={customColor ? "twist": ""} >
                   {el.title}
                 </Link>
               </li>

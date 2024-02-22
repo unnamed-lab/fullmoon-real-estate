@@ -72,6 +72,7 @@
 
       &.show {
         right: 0;
+        color: $black;
       }
     }
 
@@ -86,6 +87,12 @@
         color: $white;
         font-weight: 600;
         transition: all 500ms ease;
+
+        &.twist {
+          @include responsive(mediaup) {
+            color: $black;
+          }
+        }
 
         @include responsive(mobile) {
           color: $black;

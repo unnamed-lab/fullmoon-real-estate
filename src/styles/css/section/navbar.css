@@ -72,6 +72,7 @@
   }
   .nav .nav_menu.show {
     right: 0;
+    color: #000000;
   }
 }
 .nav .nav_menu li {
@@ -86,6 +87,11 @@
   color: #ffffff;
   font-weight: 600;
   transition: all 500ms ease;
+}
+@media (min-width: 768px) {
+  .nav .nav_menu li a.twist {
+    color: #000000;
+  }
 }
 @media (max-width: 767px) {
   .nav .nav_menu li a {
