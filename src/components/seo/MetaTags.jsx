@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { getTheme, getURLOrigin, getURLSource } from "../../utils/navigate";
-import bannerImg from "../../../public/banner.png";
+import bannerImg from "/banner.png";
 import logoImg from "../../assets/icons/logo.png";
 import { keywords } from "../../utils/utils";
 
@@ -26,6 +26,7 @@ function MetaTags({ title, desc, index, follow }) {
   return (
     <>
       <Helmet>
+        <link rel="icon" type="image/svg+xml" href={logoImg} />
         <title>{title}</title>
         <meta name="description" content={desc} />
         <meta

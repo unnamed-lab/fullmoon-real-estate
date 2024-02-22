@@ -11,7 +11,7 @@
 }
 @media (max-width: 767px) {
   .hero {
-    height: 60dvh;
+    height: 75dvh;
   }
 }
 .hero .bgBackdrop {

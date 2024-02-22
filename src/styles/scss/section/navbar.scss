@@ -20,6 +20,11 @@
   .brand_logo {
     width: clamp(60px, 80px, 120px);
     height: clamp(60px, 80px, 120px);
+
+    @include responsive(mobile) {
+      width: 60px !important;
+      height: 60px !important;
+    }
   }
 
   .nav_menu_backdrop {
