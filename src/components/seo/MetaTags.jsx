@@ -17,7 +17,7 @@ function MetaTags({ title, desc, index, follow }) {
     keywords: keywords,
     image: {
       "@type": "ImageObject",
-      url: bannerImg,
+      url: `${getURLOrigin()}${bannerImg}`,
       width: imgW,
       height: imgH,
     },
@@ -54,12 +54,12 @@ function MetaTags({ title, desc, index, follow }) {
         ---------------------------------------------------
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={desc} />
-        <meta name="twitter:image" content={bannerImg} />
+        <meta name="twitter:image" content={`${getURLOrigin()}${bannerImg}`} />
         <meta name="twitter:card" content={desc?.slice(0, 120)} />
         ---------------------------------------------------
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
-        <meta property="og:image" content={bannerImg} />
+        <meta property="og:image" content={`${getURLOrigin()}${bannerImg}`} />
         <meta property="og:image:width" content={imgW} />
         <meta property="og:image:height" content={imgH} />
         <meta property="og:url" content={pageLink} />
