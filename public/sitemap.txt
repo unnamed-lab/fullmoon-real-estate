@@ -1,4 +1,5 @@
 https://fullmoon-real-estate.vercel.app/
+https://fullmoon-real-estate.vercel.app/about
 https://fullmoon-real-estate.vercel.app/contact
 https://fullmoon-real-estate.vercel.app/service
 https://fullmoon-real-estate.vercel.app/buy

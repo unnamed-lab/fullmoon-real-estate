@@ -20,6 +20,12 @@
   width: 80px;
   height: 80px;
 }
+@media (max-width: 767px) {
+  .nav .brand_logo {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
 .nav .nav_menu_backdrop {
   display: none;
 }
@@ -66,6 +72,7 @@
   }
   .nav .nav_menu.show {
     right: 0;
+    color: #000000;
   }
 }
 .nav .nav_menu li {
@@ -80,6 +87,11 @@
   color: #ffffff;
   font-weight: 600;
   transition: all 500ms ease;
+}
+@media (min-width: 768px) {
+  .nav .nav_menu li a.twist {
+    color: #000000;
+  }
 }
 @media (max-width: 767px) {
   .nav .nav_menu li a {

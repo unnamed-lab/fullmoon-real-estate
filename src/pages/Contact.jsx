@@ -13,6 +13,14 @@ function Contact() {
   });
   return (
     <>
+      <MetaTags
+        title={"Contact Us Now - Fullmoon Real Estate"}
+        desc={
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta ducimus aliquid, asperiores praesentium fugiat?"
+        }
+        index={false}
+        follow={false}
+      />
       <Hero bgImg={bgImg} customStyles={{ height: 40 + "dvh" }}>
         <h1
           style={{
@@ -41,12 +49,6 @@ function ContactForm() {
     });
   return (
     <>
-      <MetaTags
-        title={"Contact Us Now"}
-        desc={
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta ducimus aliquid, asperiores praesentium fugiat?"
-        }
-      />
       <section className={styles.contact}>
         <form
           onSubmit={(e) => {

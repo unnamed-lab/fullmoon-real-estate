@@ -9,6 +9,10 @@ export function getURLSource() {
   const path = window.location.href;
   return path;
 }
+export function getURLOrigin() {
+  const path = window.location.origin;
+  return path;
+}
 
 export function getTheme(type = "primary") {
   switch (type) {

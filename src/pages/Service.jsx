@@ -12,10 +12,14 @@ function Service() {
   return (
     <>
       <MetaTags
-        title={"What We Offer"}
+        title={
+          "What We Offer The Best Real Estate Services - Fullmoon Real Estate"
+        }
         desc={
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta ducimus aliquid, asperiores praesentium fugiat?"
         }
+        index={false}
+        follow={false}
       />
       <Hero bgImg={bgImg} customStyles={{ height: 40 + "dvh" }}>
         <h1
