@@ -1,11 +1,9 @@
 import React from "react";
-// import ReactDOM from "react-dom/client";
 import { hydrateRoot, createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "../styles/css/root.css";
 
-
-const app = (
+const StrictApp = () => (
   <React.StrictMode>
     <App />
   </React.StrictMode>
@@ -13,9 +11,10 @@ const app = (
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrateRoot(rootElement, app)
+  hydrateRoot(rootElement, <StrictApp />);
 } else {
-  createRoot(rootElement).render(app);
+  const root = createRoot(rootElement);
+  root.render(<StrictApp />);
 }
 
 // ReactDOM.createRoot(document.getElementById("root")).render(
