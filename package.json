@@ -6,7 +6,7 @@
   "homepage": "https://fullmoon-real-estate.vercel.app/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node server.cjs",
+    "build": "vite build && nodemon server.cjs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "compile:sass": "sass --watch src/styles/scss:src/styles/css"
@@ -14,6 +14,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.17",
     "express": "^4.18.2",
+    "nodemon": "^3.1.0",
     "postcss-cli": "^11.0.0",
     "prerender-node": "^3.8.0",
     "react": "^17.0.2",
