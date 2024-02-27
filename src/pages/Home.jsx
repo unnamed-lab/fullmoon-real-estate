@@ -25,21 +25,21 @@ function Home() {
   });
   const services = [
     {
-      title: "OPERATIONAL EXCELLENCE",
+      title: "Commitment to Excellence",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus necullamcorper mattis, pulvinar dapibus leo.",
+        "We prioritize professionalism, honesty, and integrity, aiming to surpass expectations in every interaction with stakeholders",
       icon: mouseIcon,
     },
     {
-      title: "CONTINUOUS IMPROVEMENT",
+      title: "Customer-Centric Focus",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus necullamcorper mattis, pulvinar dapibus leo.",
+        "Our approach revolves around addressing the needs and concern of our clients, fostering trust and long-term relationships through dedicated service",
       icon: clockIcon,
     },
     {
-      title: "INNOVATIVE SOLUTIONS",
+      title: "Efficiency and Satisfaction",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus necullamcorper mattis, pulvinar dapibus leo.",
+        "Our goal is to achieve high levels of client retention and satisfaction by ensuring transactions are cost-effective while upholding service quality standards.",
       icon: userIcon,
     },
   ];
@@ -78,17 +78,6 @@ function Home() {
       isAvailable: true,
       hotOffer: false,
     },
-    {
-      title: "Residential land for sale ",
-      location: "Lekki phase 2 by emerald estate",
-      description:
-        "Treasure island estate phase 1 extension more than 200 housing units are projected for delivery in the scheme.",
-      price: 2000000,
-      size: "600sqm",
-      thumbnail: landImg,
-      isAvailable: true,
-      hotOffer: false,
-    },
   ];
 
   return (
@@ -111,7 +100,7 @@ function Home() {
       <Catalogue products={products} />
       <Service />
       <Agents />
-      <Faq />
+      {/* <Faq /> */}
     </>
   );
 }

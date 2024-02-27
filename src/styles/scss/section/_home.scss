@@ -1,5 +1,6 @@
 @use "../custom" as *;
 @use "../components/mixins" as *;
+@use "../components/animation" as *;
 
 .hero {
   position: relative;
@@ -58,15 +59,14 @@
     }
   }
 
-  img {
+  > .imgObject {
     position: absolute;
     z-index: 10;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
-    width: 100dvw;
-    height: inherit;
+    @include hero-bg(hero-fade, 3s);
   }
 
   .hero_content {
@@ -117,11 +117,17 @@
   margin-top: 2rem;
   margin-bottom: 4rem;
   gap: 1rem;
+  opacity: 0;
+  @include scroll-animate(fade-in, 3s);
 
   h2,
   h3 {
-    text-align: center;
+    text-align: left;
     color: $accent;
+
+    @include responsive(mobile) {
+      text-align: center;
+    }
 
     b {
       text-transform: uppercase;
@@ -217,6 +223,17 @@
 
       .item_service {
         gap: 0.25rem;
+
+        &:nth-child(1n) {
+          @include scroll-animate(fade-in, 1s);
+        }
+        &:nth-child(2n) {
+          @include scroll-animate(fade-in, 3s);
+        }
+        &:nth-child(3n) {
+          @include scroll-animate(fade-in, 5s);
+        }
+
         .icon_placeholder {
           display: block;
           width: 100%;
@@ -279,6 +296,8 @@
   margin-top: 2rem;
   margin-bottom: 4rem;
   gap: 1rem;
+  opacity: 0;
+  @include scroll-animate(fade-in, 3s);
 
   .catalogue_container {
     width: -webkit-fill-available;
@@ -411,6 +430,8 @@
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
   margin-bottom: 2rem;
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 50px);
 
   @include responsive(mobile) {
     grid-template-columns: repeat(1, 1fr);
@@ -552,6 +573,8 @@
 }
 
 .find_agent {
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 100px);
   .agent_gallery {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr);
@@ -624,6 +647,8 @@
 .faq {
   margin-top: 3rem;
   margin-bottom: 2rem;
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 50px);
 
   .faq_container {
     display: flex;

@@ -23,7 +23,7 @@ function AboutCompany({ logo, content }) {
           {content?.map((el, index) => {
             return (
               <li key={index} className={styles.item_service}>
-                <div className={styles.icon_placeholder}>
+                {/* <div className={styles.icon_placeholder}>
                   <span>
                     <img
                       src={el.icon}
@@ -34,7 +34,7 @@ function AboutCompany({ logo, content }) {
                       title={el.title}
                     />
                   </span>
-                </div>
+                </div> */}
                 <div>
                   <h3>{el.title}</h3>
                   <p>{el.description}</p>

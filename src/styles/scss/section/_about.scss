@@ -4,6 +4,8 @@
 .about_intro {
   display: block;
   margin-bottom: 5%;
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 50px);
 
   h2,
   h3 {
@@ -34,6 +36,8 @@
 .about_team {
   background-color: rgba($color: $accent2, $alpha: 0.1);
   padding: 2% 12% !important;
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 50px);
 
   h2,
   h3 {
@@ -133,6 +137,8 @@
 .about_service {
   margin-top: 3%;
   margin-bottom: 2%;
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 50px);
 
   @include responsive(mobile) {
     margin-top: 10%;
@@ -229,6 +235,8 @@
 .about_testimonial {
   margin-top: 3%;
   margin-bottom: 2%;
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 50px);
 
   @include responsive(mobile) {
     margin-top: 10%;

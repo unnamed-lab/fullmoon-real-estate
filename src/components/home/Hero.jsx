@@ -28,6 +28,7 @@ function Hero({
       {backdrop ? <div className={styles.bgBackdrop}></div> : ""}
       {bgImg ? (
         <img
+        className={styles.imgObject}
           src={bgImg}
           width={"1024px"}
           height={"780px"}

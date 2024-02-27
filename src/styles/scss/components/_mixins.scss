@@ -25,3 +25,22 @@
     @content;
   }
 }
+
+@mixin scroll-animate($keyframe, $delay: 1s, $effect: linear, $offset: 0px) {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: $keyframe $effect forwards;
+    animation-delay: $delay;
+    animation-timeline: view();
+    animation-range-start: 50dvh $offset;
+    animation-range-end: entry;
+  }
+}
+
+@mixin hero-bg($keyframe, $delay: 1s, $effect: linear, $offset: -5dvh) {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: $keyframe $effect forwards;
+    animation-delay: $delay;
+    animation-timeline: view(y);
+    animation-range: exit;
+  }
+}
