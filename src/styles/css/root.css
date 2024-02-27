@@ -1,3 +1,22 @@
+@keyframes fade-in {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes hero-fade {
+  25% {
+    scale: 0.8;
+    opacity: 1;
+  }
+  85% {
+    scale: 2;
+    opacity: 0.3;
+  }
+}
 .btn {
   cursor: pointer;
   padding: 0.875rem;

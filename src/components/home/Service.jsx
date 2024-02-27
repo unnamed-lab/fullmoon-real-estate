@@ -6,18 +6,21 @@ import service03 from "../../assets/img/service03.png";
 import service04 from "../../assets/img/service04.png";
 function Service() {
   const services = [
-    { title: "Real Estate Consulting", url: "/", img: service01 },
-    { title: "Real estate development", url: "/", img: service02 },
-    { title: "Real estate management", url: "/", img: service03 },
-    { title: "Selling of land", url: "/", img: service04 },
+    { title: "Real Estate Consulting", url: "/service", img: service01 },
+    { title: "Real estate development", url: "/service", img: service02 },
+    { title: "Real estate management", url: "/service", img: service03 },
+    { title: "Selling of land", url: "/service", img: service04 },
   ];
   return (
     <section className={styles.service_showcase}>
       <div className={styles.header}>
         <h3>Service</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Welcome to Fullmoon Real Estate Properties, where we offer a
+          comprehensive range of services tailored to meet your every real
+          estate need. Whether you're buying, selling, renting, or investing,
+          our dedicated team of professionals is here to guide you through every
+          step of the process.
         </p>
         <button type="button" className="btn big secondary">
           More information

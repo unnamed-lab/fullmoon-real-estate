@@ -6,17 +6,17 @@ function Service({ header, headerStyle }) {
   const services = [
     {
       title: "Real Estate Consulting",
-      desc: "Finding your perfect luxury residence tailored to your unique preferences and lifestyle.",
+      desc: "Get expert advice and guidance tailored to your needs. From market analysis to risk assessment, we help you make informed decisions in the real estate market.  Let us help you navigate the complexities of the real estate industry and achieve your goals with confidence.",
       img: room01,
     },
     {
       title: "Real estate management",
-      desc: "In-depth insights and trends to inform and empower your real estate decisions.",
+      desc: "Maximize your investment with our hassle-free management solutions. From tenant screening to maintenance, we handle everything to ensure your property thrives.Trust us to handle the day-to-day management of your property, so you can focus on what matters most to you.",
       img: room02,
     },
     {
       title: "Real estate development",
-      desc: "Seamless relocation support ensuring a transition as luxurious as your new home.",
+      desc: "Turn your vision into reality with our full-service development expertise. From site selection to project completion, we bring your project to life on time and within budget. Partner with us to unlock the full potential of your real estate investment and create lasting value for generations to come.",
       img: room03,
     },
   ];

@@ -34,35 +34,38 @@ function AboutUs() {
       </Hero>
       <Intro>
         <p>
-          <b>
-            Fullmoon is a premium or real estate agents and landing agencies
-          </b>{" "}
-          where modern aesthetics are combined with a tasteful simplicity and
-          where the ease of use is achieved without compromise in your ability
-          to customize the design.
+          At <b>Fullmoon Real Estate Properties</b>, we believe in more than
+          just buying and selling properties. We are dedicated to creating
+          fulfilling experiences for all our stakeholders - customers, clients,
+          agents, and employees alike. Our commitment to excellence,
+          professionalism, honesty, and integrity sets us apart in the real
+          estate industry.
         </p>
         <p>
-          Whether you are a real estate agent looking to build a website for
-          your company or a web developer seeking a perfect WordPress theme for
-          your next project, you are certain to appreciate the numerous features
-          and benefits that our theme provides.
+          Our mission is clear: to exceed the expectations of all stakeholders
+          by providing unparalleled service characterized by excellence,
+          professionalism, and unwavering integrity. We prioritize our clients'
+          needs above all else, cultivating long-lasting relationships built on
+          trust and commitment. Our goal is to ensure every dream becomes a
+          reality through cost-effective transactions and unparalleled service
+          standards.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
-          repellat dolorem sequi ducimus iusto maiores obcaecati aspernatur
-          nobis eius optio est molestiae laborum, temporibus odio eos minima
-          officiis, delectus velit alias, voluptates dolor placeat recusandae.
-          Odit adipisci quia rerum maiores?
+          Our vision extends beyond mere transactions; we aim to address global
+          housing challenges with genuine care, transparency, and dedication. We
+          strive to surpass client expectations, making home ownership and
+          business enhancement seamless and worry-free.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vel
-          recusandae aspernatur ipsam perspiciatis ipsum cupiditate
-          reprehenderit! Maiores, modi error.
+          Integrity, reliability, transparency, and accountability are the
+          cornerstones of our operations. We uphold these values in every
+          interaction, fostering a culture of excellence and trust within our
+          organization and beyond.
         </p>
       </Intro>
       <Team />
       <ServiceAbout />
-      <Testimonial />
+      {/* <Testimonial /> */}
     </>
   );
 }
