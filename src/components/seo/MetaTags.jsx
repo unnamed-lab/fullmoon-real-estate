@@ -5,7 +5,7 @@ import logoImg from "../../assets/icons/logo.png";
 import { keywords } from "../../utils/utils";
 
 function MetaTags({ title, desc, index, follow }) {
-  const pageLink = getURLSource();
+  // const pageLink = getURLSource();
   const imgW = "800";
   const imgH = "600";
   const type = "website";
@@ -17,7 +17,7 @@ function MetaTags({ title, desc, index, follow }) {
     keywords: keywords,
     image: {
       "@type": "ImageObject",
-      url: `${getURLOrigin()}${bannerImg}`,
+      // url: `${getURLOrigin()}${bannerImg}`,
       width: imgW,
       height: imgH,
     },
@@ -33,9 +33,9 @@ function MetaTags({ title, desc, index, follow }) {
           name="publisher"
           content="Anuoluwa S. Adebayo - Cypheir Technology"
         />
-        <meta name="theme-color" content={getTheme()} />
+        {/* <meta name="theme-color" content={getTheme()} /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href={getURLOrigin()} />
+        {/* <link rel="canonical" href={getURLOrigin()} /> */}
         <link rel="apple-touch-icon" href={logoImg} />
         ---------------------------------------------------
         {/* <meta
@@ -54,15 +54,15 @@ function MetaTags({ title, desc, index, follow }) {
         ---------------------------------------------------
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={desc} />
-        <meta name="twitter:image" content={`${getURLOrigin()}${bannerImg}`} />
+        {/* <meta name="twitter:image" content={`${getURLOrigin()}${bannerImg}`} /> */}
         <meta name="twitter:card" content={desc?.slice(0, 120)} />
         ---------------------------------------------------
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
-        <meta property="og:image" content={`${getURLOrigin()}${bannerImg}`} />
+        {/* <meta property="og:image" content={`${getURLOrigin()}${bannerImg}`} /> */}
         <meta property="og:image:width" content={imgW} />
         <meta property="og:image:height" content={imgH} />
-        <meta property="og:url" content={pageLink} />
+        {/* <meta property="og:url" content={pageLink} /> */}
         <meta property="og:type" content={type} />
         ---------------------------------------------------
         <script type="application/ld+json">{`${JSON.stringify(

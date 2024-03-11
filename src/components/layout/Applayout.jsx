@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { Footer, Nav, TopBtn } from "../ui";
 import { useState } from "react";
+import "../../styles/css/root.css";
 
 function Applayout() {
-  const [customNav, setCustomNav] = useState("")
+  const [customNav, setCustomNav] = useState("");
   return (
     <>
       <Nav customColor={customNav} />
