@@ -6,6 +6,9 @@ function InputField({
   customStyles,
   required = false,
   onChange,
+  honeypot,
+  autoComplete,
+  value,
 }) {
   const labelId = label.toLowerCase().split(" ").join("");
   const inputType = (type) => {
@@ -25,6 +28,9 @@ function InputField({
             customStyles={customStyles}
             required={required}
             onChange={onChange}
+            honeypot={honeypot}
+            autoComplete={autoComplete}
+            value={value}
           />
         );
 
@@ -39,6 +45,8 @@ function InputField({
             customStyles={customStyles}
             required={required}
             onChange={onChange}
+            honeypot={honeypot}
+            value={value}
           />
         );
     }
@@ -63,6 +71,9 @@ function TextBox({
   customStyles,
   required,
   onChange,
+  honeypot,
+  autoComplete,
+  value,
 }) {
   switch (type) {
     case "text":
@@ -70,30 +81,54 @@ function TextBox({
     case "email":
     case "search":
       return (
-        <input
-          type={type}
-          id={labelId}
-          name={name}
-          placeholder={placeholder}
-          style={customStyles}
-          required={required}
-          autoComplete={name}
-          onChange={onChange}
-        />
+        <>
+          <input
+            type={type}
+            id={labelId}
+            name={name}
+            placeholder={placeholder}
+            style={customStyles}
+            required={required}
+            autoComplete={autoComplete ? true : false}
+            onChange={onChange}
+            value={value}
+          />
+          <input
+            type={type}
+            id={honeypot}
+            name={honeypot}
+            placeholder={placeholder}
+            className={"ohnohoney"}
+            required={false}
+            autoComplete={autoComplete ? true : false}
+          />
+        </>
       );
     case "textbox":
     case "textarea":
       return (
-        <textarea
-          id={labelId}
-          name={name}
-          cols="30"
-          rows="10"
-          placeholder={placeholder}
-          required={required}
-          style={customStyles}
-          onChange={onChange}
-        ></textarea>
+        <>
+          <textarea
+            id={labelId}
+            name={name}
+            cols="30"
+            rows="10"
+            placeholder={placeholder}
+            required={required}
+            style={customStyles}
+            onChange={onChange}
+            value={value}
+          ></textarea>
+          <textarea
+            id={honeypot}
+            name={honeypot}
+            cols="1"
+            rows="1"
+            placeholder={placeholder}
+            className={"ohnohoney"}
+            required={false}
+          ></textarea>
+        </>
       );
   }
 }
@@ -106,6 +141,7 @@ function SelectBox({
   customStyles,
   required,
   onChange,
+  honeypot,
 }) {
   switch (type) {
     case "radio":

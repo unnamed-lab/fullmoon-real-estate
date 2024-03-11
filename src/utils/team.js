@@ -26,3 +26,13 @@ export const team = [
     img: agent04,
   },
 ];
+
+export const company = {
+  name: "Fullmoon Real Estate",
+  email: "adebayo.anuoluwa02@gmail.com",
+  social: {
+    facebook: "https://web.facebook.com/FREPABO",
+    twitter: "https://twitter.com/FULLMOONRE2180s",
+    instagram: "https://www.instagram.com/fullmoon_real_estate/",
+  },
+};

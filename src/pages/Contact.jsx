@@ -3,8 +3,14 @@ import bgImg from "../assets/img/banner01.jpg";
 import styles from "../styles/css/app.module.css";
 import { InputField } from "../components/forms";
 import { useOutletContext } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import MetaTags from "../components/seo/MetaTags";
+import emailjs from "@emailjs/browser";
+import { company } from "../utils/team";
+ import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// minified version is also included
+// import 'react-toastify/dist/ReactToastify.min.css';
 
 function Contact() {
   const [setCustomNav] = useOutletContext();
@@ -39,7 +45,11 @@ function Contact() {
 }
 
 function ContactForm() {
+  const form = useRef(null);
   const [formData, setFormData] = useState({});
+  const mailServiceID = import.meta.env.VITE_MAIL_SERVICE_ID;
+  const mailTemplateID = import.meta.env.VITE_MAIL_TEMPLATE_ID;
+  const mailPublicKey = import.meta.env.VITE_MAIL_PUBLIC_KEY;
 
   const onInputChange = (e) =>
     setFormData({
@@ -47,48 +57,80 @@ function ContactForm() {
       [e.target.name]:
         e.target.name === "terms" ? e.target.checked : e.target.value,
     });
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    console.log(form.current);
+
+    emailjs
+      .sendForm(mailServiceID, mailTemplateID, form.current, {
+        publicKey: mailPublicKey,
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          toast("Email has been sent successfully!")
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast("Email failed!");
+        }
+      );
+  };
+
   return (
     <>
       <section className={styles.contact}>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-        >
+        <ToastContainer />
+        <form ref={form} onSubmit={sendEmail}>
+          <input type="hidden" name="to_name" value={company.name} />
+          <input type="hidden" name="to_email" value={company.email} />
           <div className={styles.name_group}>
             <InputField
               type={"text"}
-              name={"fname"}
+              name={"user_fname"}
+              honeypot={"firstname"}
               label={"First Name"}
               required={true}
               placeholder={"Enter your first name"}
               onChange={onInputChange}
+              autoComplete={true}
+              value={formData?.user_fname}
             />
 
             <InputField
               type={"text"}
-              name={"lname"}
+              name={"user_lname"}
+              honeypot={"lastname"}
               label={"Last Name"}
               required={true}
               placeholder={"Enter your last name"}
               onChange={onInputChange}
+              autoComplete={true}
+              value={formData?.user_lname}
             />
           </div>
           <InputField
             type={"email"}
-            name={"email"}
+            name={"user_email"}
+            honeypot={"email"}
             label={"Email"}
             required={true}
             placeholder={"Email"}
             onChange={onInputChange}
+            autoComplete={true}
+            value={formData?.user_email}
           />
           <InputField
             type={"textarea"}
-            name={"message"}
+            name={"user_message"}
+            honeypot={"message"}
             label={"Message"}
             required={true}
             placeholder={"Message"}
             onChange={onInputChange}
+            value={formData?.user_message}
           />
           <InputField
             type={"checkbox"}
@@ -110,6 +152,8 @@ function ContactForm() {
               fontWeight: 400,
               textTransform: "uppercase",
             }}
+            data-sitekey="your_site_key"
+            data-callback={sendEmail}
           >
             Submit
           </button>

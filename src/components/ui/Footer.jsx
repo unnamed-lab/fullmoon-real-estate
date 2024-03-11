@@ -2,6 +2,7 @@ import "../../styles/css/section/footer.css";
 import logo from "../../assets/icons/logo.png";
 import { Link } from "react-router-dom";
 import FooterIcon from "./FooterIcon";
+import { company } from "../../utils/team";
 
 function Footer() {
   const yr = new Date().getFullYear();
@@ -9,17 +10,17 @@ function Footer() {
     {
       name: "Facebook",
       icon: <FooterIcon type={"facebook"} />,
-      url: "https://web.facebook.com/FREPABO",
+      url: company.social.facebook,
     },
     {
       name: "Twitter",
       icon: <FooterIcon type={"twitter"} />,
-      url: "https://twitter.com/FULLMOONRE2180s",
+      url: company.social.twitter,
     },
     {
       name: "Instagram",
       icon: <FooterIcon type={"instagram"} />,
-      url: "https://www.instagram.com/fullmoon_real_estate/",
+      url: company.social.instagram,
     },
     // { name: "YouTube", icon: <FooterIcon type={"youtube"} />, url: "/" },
   ];
