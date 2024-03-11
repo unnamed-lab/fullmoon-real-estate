@@ -38,7 +38,7 @@ function MetaTags({ title, desc, index, follow }) {
         <link rel="canonical" href={getURLOrigin()} />
         <link rel="apple-touch-icon" href={logoImg} />
         ---------------------------------------------------
-        <meta
+        {/* <meta
           name="robots"
           content={`${index ? "index" : "noindex"}, ${
             follow ? "follow" : "nofollow"
@@ -49,7 +49,7 @@ function MetaTags({ title, desc, index, follow }) {
           content={`${index ? "index" : "noindex"}, ${
             follow ? "follow" : "nofollow"
           }`}
-        />
+        /> */}
         <meta name="keywords" content={keywords.join(", ")} />
         ---------------------------------------------------
         <meta name="twitter:title" content={title} />
