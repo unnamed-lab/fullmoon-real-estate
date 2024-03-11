@@ -8,7 +8,7 @@ function Nav({ customColor }) {
   const navMenu = [
     { title: "home", url: "/" },
     { title: "about", url: "/about" },
-    { title: "buy", url: "/buy" },
+    // { title: "buy", url: "/buy" },
     { title: "services", url: "/service" },
     { title: "contact", url: "/contact" },
   ];
@@ -48,10 +48,10 @@ function Nav({ customColor }) {
           </svg>
         </button>
         <ul className={`nav_menu ${activeNav ? "show" : ""}`}>
-          {navMenu?.map((el, index) => {
+          {navMenu.map((el, index) => {
             return (
               <li key={index} className="nav_option">
-                <Link to={el.url} className={customColor ? "twist": ""} >
+                <Link to={el.url} className={customColor ? "twist" : ""}>
                   {el.title}
                 </Link>
               </li>

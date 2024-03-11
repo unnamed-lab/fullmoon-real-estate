@@ -15,7 +15,6 @@ import clockIcon from "../assets/icons/clock.svg";
 import { SearchField } from "../components/forms";
 import { useOutletContext } from "react-router-dom";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 import MetaTags from "../components/seo/MetaTags";
 
 function Home() {
@@ -94,13 +93,17 @@ function Home() {
       />
       <Hero bgImg={bgImg}>
         <h1>Build your dream home on the finest property</h1>
-        <SearchField />
+        <h2>
+          At Fullmoon Real Estate Properties, we believe in more than just
+          buying and selling properties.
+        </h2>
+        {/* <SearchField /> */}
       </Hero>
       <AboutCompany logo={logo} content={services} />
-      <Catalogue products={products} />
+      {/* <Catalogue products={products} /> */}
       <Service />
       <Agents />
-      {/* <Faq /> */}
+      <Faq />
     </>
   );
 }

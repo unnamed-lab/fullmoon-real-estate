@@ -90,7 +90,18 @@
       }
     }
 
-    h2,
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 48px;
+      text-align: left;
+      width: 70%;
+
+      @include responsive(mobile) {
+        width: 90%;
+      }
+    }
+
     h3,
     h4,
     h5,

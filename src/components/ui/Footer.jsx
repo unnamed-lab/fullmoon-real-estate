@@ -6,15 +6,27 @@ import FooterIcon from "./FooterIcon";
 function Footer() {
   const yr = new Date().getFullYear();
   const social = [
-    { name: "Facebook", icon: <FooterIcon type={"facebook"} />, url: "/" },
-    { name: "Twitter", icon: <FooterIcon type={"twitter"} />, url: "/" },
-    { name: "Instagram", icon: <FooterIcon type={"instagram"} />, url: "/" },
-    { name: "YouTube", icon: <FooterIcon type={"youtube"} />, url: "/" },
+    {
+      name: "Facebook",
+      icon: <FooterIcon type={"facebook"} />,
+      url: "https://web.facebook.com/FREPABO",
+    },
+    {
+      name: "Twitter",
+      icon: <FooterIcon type={"twitter"} />,
+      url: "https://twitter.com/FULLMOONRE2180s",
+    },
+    {
+      name: "Instagram",
+      icon: <FooterIcon type={"instagram"} />,
+      url: "https://www.instagram.com/fullmoon_real_estate/",
+    },
+    // { name: "YouTube", icon: <FooterIcon type={"youtube"} />, url: "/" },
   ];
-  const others = [
-    { name: "Privacy Policy", url: "/" },
-    { name: "Terms and Conditions", url: "/" },
-  ];
+  // const others = [
+  //   { name: "Privacy Policy", url: "/" },
+  //   { name: "Terms and Conditions", url: "/" },
+  // ];
   return (
     <footer className="footer">
       <ul className="list_menu">
@@ -39,7 +51,7 @@ function Footer() {
           loading="lazy"
         />
       </Link>
-      <ul className="list_menu">
+      {/* <ul className="list_menu">
         {others?.map((el, index) => {
           return (
             <li key={index}>
@@ -47,7 +59,7 @@ function Footer() {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
       <div className="credit">
         &copy; {yr} Fullmoon Real Estate - All right reserved.
       </div>

@@ -31,7 +31,7 @@
     animation: $keyframe $effect forwards;
     animation-delay: $delay;
     animation-timeline: view();
-    animation-range-start: 50dvh $offset;
+    animation-range-start: 50px;
     animation-range-end: entry;
   }
 }
