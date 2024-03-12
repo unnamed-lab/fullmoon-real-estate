@@ -39,7 +39,7 @@ function Service() {
         }
         headerStyle={{ textAlign: "center", textTransform: "none" }}
       />
-      <Testimonial />
+      {/* <Testimonial /> */}
     </>
   );
 }

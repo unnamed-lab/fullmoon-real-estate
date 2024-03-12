@@ -400,12 +400,13 @@
 
 .accordion {
   cursor: pointer;
-  width: 100%;
+  width: -webkit-fill-available;
   display: flex;
   flex-wrap: wrap;
   padding: 1rem 1.75rem;
   border-radius: 6px;
   box-shadow: 0px 2px 3px 0px #d5d8dc;
+  margin-bottom: 1.5rem;
 }
 @media (max-width: 767px) {
   .accordion {
