@@ -3,27 +3,33 @@ import agent01 from "../assets/img/member01.jpg";
 import agent02 from "../assets/img/member02.jpg";
 import agent03 from "../assets/img/member03.jpg";
 import agent04 from "../assets/img/member04.jpg";
+import agent05 from "../assets/img/member05.jpg";
 
 export const team = [
   {
-    name: "Emmanuel Joseph",
-    title: "Project Officer",
+    name: "Asuquo Destiny Chinenye",
+    title: "Managing Director/CEO",
     img: agent01,
   },
   {
-    name: "",
-    title: "Site Inspection Officer",
+    name: "Emmanuel Joseph",
+    title: "Project Officer",
     img: agent02,
+  },
+  {
+    name: "Shaibu Salifu",
+    title: "Site Inspection Officer",
+    img: agent03,
   },
   {
     name: "Oluwadipe Solomon Gbenga",
     title: "Graphics Designer",
-    img: agent03,
+    img: agent04,
   },
   {
     name: "Bukola Grace Afolorunsho",
     title: "Customer Representative Officer",
-    img: agent04,
+    img: agent05,
   },
 ];
 

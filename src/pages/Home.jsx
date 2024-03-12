@@ -102,7 +102,7 @@ function Home() {
       <AboutCompany logo={logo} content={services} />
       {/* <Catalogue products={products} /> */}
       <Service />
-      <Agents />
+      {/* <Agents /> */}
       <Faq />
     </>
   );

@@ -8,9 +8,10 @@ function Nav({ customColor }) {
   const navMenu = [
     { title: "home", url: "/" },
     { title: "about", url: "/about" },
-    // { title: "buy", url: "/buy" },
     { title: "services", url: "/service" },
+    { title: "faq", url: "/faq" },
     { title: "contact", url: "/contact" },
+    // { title: "buy", url: "/buy" },
   ];
   return (
     <header>
