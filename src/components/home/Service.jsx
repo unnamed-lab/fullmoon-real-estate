@@ -1,15 +1,28 @@
 import { Link } from "react-router-dom";
 import styles from "../../styles/css/app.module.css";
-import service01 from "../../assets/img/service01.png";
-import service02 from "../../assets/img/service02.png";
-import service03 from "../../assets/img/service03.png";
-import service04 from "../../assets/img/service04.png";
+
 function Service() {
   const services = [
-    { title: "Real Estate Consulting", url: "/service", img: service01 },
-    { title: "Real estate development", url: "/service", img: service02 },
-    { title: "Real estate management", url: "/service", img: service03 },
-    { title: "Selling of land", url: "/service", img: service04 },
+    {
+      title: "Real Estate Consulting",
+      url: "/service",
+      img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710313173/fullmoon-real-estate/service/service01_guj0js.png",
+    },
+    {
+      title: "Real estate development",
+      url: "/service",
+      img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710313188/fullmoon-real-estate/service/service02_de2bwk.png",
+    },
+    {
+      title: "Real estate management",
+      url: "/service",
+      img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710313228/fullmoon-real-estate/service/service03_eq9g3m.png",
+    },
+    {
+      title: "Selling of land",
+      url: "/service",
+      img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710313199/fullmoon-real-estate/service/service04_dcfjjm.jpg",
+    },
   ];
   return (
     <section className={styles.service_showcase}>
