@@ -21,6 +21,7 @@ function Team() {
                 alt={el.name}
                 title={el.name}
                 loading="lazy"
+                fetchPriority="high"
               />
             </li>
           );

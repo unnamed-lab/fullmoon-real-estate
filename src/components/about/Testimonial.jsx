@@ -64,6 +64,7 @@ function Testimonial() {
                       height={"150px"}
                       loading="lazy"
                       title={el.name}
+                      fetchPriority="high"
                     />
                   </div>
                   <div className={styles.profile_info}>

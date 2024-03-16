@@ -50,6 +50,7 @@ function Footer() {
           alt="Fullmoon Real Estate"
           title="Fullmoon Real Estate"
           loading="lazy"
+          fetchPriority="high"
         />
       </Link>
       {/* <ul className="list_menu">

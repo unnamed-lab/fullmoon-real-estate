@@ -34,6 +34,7 @@ function Service({ header, headerStyle }) {
                   height={"200px"}
                   title={el.title}
                   loading="lazy"
+                  fetchPriority="high"
                 />
               </div>
               <p>{el.desc}</p>

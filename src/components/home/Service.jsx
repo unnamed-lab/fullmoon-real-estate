@@ -71,6 +71,7 @@ function Service() {
                 alt={el.title}
                 title={el.title}
                 loading="lazy"
+                fetchPriority="high"
               />
             </li>
           );

@@ -28,12 +28,13 @@ function Hero({
       {backdrop ? <div className={styles.bgBackdrop}></div> : ""}
       {bgImg ? (
         <img
-        className={styles.imgObject}
+          className={styles.imgObject}
           src={bgImg}
           width={"1024px"}
           height={"780px"}
           alt="Welcome to Fullmoon Real Estate"
           title="Welcome to Fullmoon Real Estate"
+          fetchPriority="high"
         />
       ) : (
         ""

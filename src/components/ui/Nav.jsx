@@ -24,10 +24,12 @@ function Nav({ customColor }) {
             alt="Fullmoon Real Estate"
             title="Fullmoon Real Estate"
             loading="lazy"
+            fetchPriority="high"
           />
         </Link>
         <button
           className="nav_toggle"
+          aria-label="Navigation Button"
           onClick={() => {
             setNav(!activeNav);
           }}

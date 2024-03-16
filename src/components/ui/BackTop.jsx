@@ -3,6 +3,7 @@ function BackTop() {
     <button
       type="button"
       className="btn-top"
+      aria-label="Back To Top"
       onClick={() => {
         window.scroll(0, 0);
       }}

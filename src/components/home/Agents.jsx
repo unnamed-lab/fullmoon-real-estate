@@ -55,6 +55,7 @@ function Agents() {
                   loading="lazy"
                   alt={el.name}
                   title={el.name}
+                  fetchPriority="high"
                 />
               </div>
               <div className={styles.details}>
