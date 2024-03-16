@@ -83,10 +83,7 @@ function Home() {
     <>
       <MetaTags
         title={
-          "Fullmoon Real Estate - Build your dream home on the finest property"
-        }
-        desc={
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta ducimus aliquid, asperiores praesentium fugiat?"
+          "Fullmoon Real Estate Properties: Build dream home on prime land"
         }
         index={true}
         follow={true}

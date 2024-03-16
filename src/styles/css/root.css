@@ -469,4 +469,33 @@
   z-index: -1;
 }
 
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  animation: l14 4s infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  border: 8px solid;
+  border-radius: 50%;
+  border-color: #409fff #409fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  mix-blend-mode: darken;
+  animation: l14 1s infinite linear;
+}
+
+.loader::after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #dd3333 #dd3333;
+  animation-direction: reverse;
+}
+
+@keyframes l14 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
 /*# sourceMappingURL=root.css.map */
