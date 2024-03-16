@@ -104,10 +104,12 @@
   }
 }
 .hero .hero_content h1 {
+  font-size: 3.625rem;
   width: 70%;
 }
 @media (max-width: 767px) {
   .hero .hero_content h1 {
+    font-size: 2.25rem;
     width: 90%;
   }
 }
@@ -715,6 +717,15 @@
   .faq .faq_container {
     width: 100%;
   }
+}
+
+.loading_screen {
+  width: -webkit-fill-available;
+  height: 100dvh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about_intro {
