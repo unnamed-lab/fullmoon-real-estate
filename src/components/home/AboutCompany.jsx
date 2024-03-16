@@ -15,6 +15,7 @@ function AboutCompany({ logo, content }) {
               loading="lazy"
               alt="Fullmoon Real Estate"
               title="Fullmoon Real Estate"
+              fetchPriority="high"
             />
           </div>
           <div className={styles.item_square}></div>
@@ -32,6 +33,7 @@ function AboutCompany({ logo, content }) {
                       loading="lazy"
                       alt={el.title}
                       title={el.title}
+                      fetchPriority="high"
                     />
                   </span>
                 </div> */}

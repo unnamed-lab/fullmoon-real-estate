@@ -37,44 +37,92 @@ function MetaTags({
   return (
     <>
       <Helmet>
-        <link rel="icon" type="image/svg+xml" href={logoImg} />
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href={logoImg}
+          data-react-helmet="true"
+        />
         <title>{title}</title>
-        <meta name="description" content={desc} />
+        <meta name="description" content={desc} data-react-helmet="true" />
         <meta
           name="publisher"
           content="Anuoluwa S. Adebayo - Cypheir Technology"
+          data-react-helmet="true"
         />
-        <meta name="theme-color" content={getTheme()} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href={pageLink} />
-        <link rel="apple-touch-icon" href={logoImg} />
+        <meta
+          name="theme-color"
+          content={getTheme()}
+          data-react-helmet="true"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+          data-react-helmet="true"
+        />
+        <link rel="canonical" href={pageLink} data-react-helmet="true" />
+        <link rel="apple-touch-icon" href={logoImg} data-react-helmet="true" />
         ---------------------------------------------------
         <meta
           name="robots"
           content={`${index ? "index" : "noindex"}, ${
             follow ? "follow" : "nofollow"
           }`}
+          data-react-helmet="true"
         />
         <meta
           name="X-Robots-Tag"
           content={`${index ? "index" : "noindex"}, ${
             follow ? "follow" : "nofollow"
           }`}
+          data-react-helmet="true"
         />
-        <meta name="keywords" content={keywords.join(", ")} />
+        <meta
+          name="keywords"
+          content={keywords.join(", ")}
+          data-react-helmet="true"
+        />
         ---------------------------------------------------
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={desc} />
-        <meta name="twitter:image" content={bannerImg} />
-        <meta name="twitter:card" content={desc?.slice(0, 120)} />
+        <meta name="twitter:title" content={title} data-react-helmet="true" />
+        <meta
+          name="twitter:description"
+          content={desc}
+          data-react-helmet="true"
+        />
+        <meta
+          name="twitter:image"
+          content={bannerImg}
+          data-react-helmet="true"
+        />
+        <meta
+          name="twitter:card"
+          content={desc?.slice(0, 120)}
+          data-react-helmet="true"
+        />
         ---------------------------------------------------
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={desc} />
-        <meta property="og:image" content={bannerImg} />
-        <meta property="og:image:width" content={imgW} />
-        <meta property="og:image:height" content={imgH} />
-        <meta property="og:url" content={pageLink} />
-        <meta property="og:type" content={type} />
+        <meta property="og:title" content={title} data-react-helmet="true" />
+        <meta
+          property="og:description"
+          content={desc}
+          data-react-helmet="true"
+        />
+        <meta
+          property="og:image"
+          content={bannerImg}
+          data-react-helmet="true"
+        />
+        <meta
+          property="og:image:width"
+          content={imgW}
+          data-react-helmet="true"
+        />
+        <meta
+          property="og:image:height"
+          content={imgH}
+          data-react-helmet="true"
+        />
+        <meta property="og:url" content={pageLink} data-react-helmet="true" />
+        <meta property="og:type" content={type} data-react-helmet="true" />
         ---------------------------------------------------
         <script type="application/ld+json">{`${JSON.stringify(
           schemaObj

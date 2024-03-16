@@ -37,6 +37,7 @@ function Catalogue({ products, customStyles, header = true }) {
                     loading="lazy"
                     alt={el.title}
                     title={el.title}
+                    fetchPriority="high"
                   />
                 </div>
                 <div style={{ padding: ".5rem 1.25rem" }}>
