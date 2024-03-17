@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
@@ -7,6 +7,7 @@ export default defineConfig({
   ssr: {
     noExternal: ["react-helmet-async"],
   },
-  "process.env.BROWSER": JSON.stringify(true)
+  build: {
+    minify: false,
+  },
 });
-
