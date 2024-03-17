@@ -4,24 +4,24 @@ import styles from "../../styles/css/app.module.css";
 function Service() {
   const services = [
     {
-      title: "Real Estate Consulting",
+      title: "Affordable Accessible Real Estate Investment",
       url: "/service",
       img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710313173/fullmoon-real-estate/service/service01_guj0js.png",
     },
     {
-      title: "Real estate development",
+      title: "Business Consultancy",
+      url: "/service",
+      img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710313199/fullmoon-real-estate/service/service04_dcfjjm.jpg",
+    },
+    {
+      title: "Facility Management and Project Management",
       url: "/service",
       img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710313188/fullmoon-real-estate/service/service02_de2bwk.png",
     },
     {
-      title: "Real estate management",
+      title: "Brokerage and Land Banking",
       url: "/service",
       img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710313228/fullmoon-real-estate/service/service03_eq9g3m.png",
-    },
-    {
-      title: "Selling of land",
-      url: "/service",
-      img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710313199/fullmoon-real-estate/service/service04_dcfjjm.jpg",
     },
   ];
   return (

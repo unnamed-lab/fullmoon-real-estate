@@ -30,7 +30,7 @@ export const team = [
 
 export const company = {
   name: "Fullmoon Real Estate",
-  email: "adebayo.anuoluwa02@gmail.com",
+  email: "fullmoonrealestateltd@gmail.com",
   social: {
     facebook: "https://web.facebook.com/FREPABO",
     twitter: "https://twitter.com/FULLMOONRE2180s",
