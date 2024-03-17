@@ -5,15 +5,15 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const isProduction = process.env.NODE_ENV === "production";
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const toAbsolute = (p) => path.resolve(__dirname, p);
 
 const template = fs.readFileSync(toAbsolute("dist/static/index.html"), "utf-8");
-const ssrManifest = isProduction
-  ? await fs.readFile("./dist/client/.vite/ssr-manifest.json", "utf-8")
-  : undefined;
+
+const ssrManifest = fs.readFileSync(
+  "./dist/client/.vite/ssr-manifest.json",
+  "utf-8"
+);
 
 const render = (await import("./dist/server/entry-server.js")).render;
 
