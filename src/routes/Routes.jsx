@@ -9,9 +9,11 @@ import { About, Buy, Contact, Faq, Home, NotFound, Service } from "../pages";
 import Error from "../components/layout/Error";
 import { HelmetProvider } from "react-helmet-async";
 
+export const helmetContext = {};
+
 export const Router = () => {
   return (
-    <HelmetProvider>
+    <HelmetProvider context={helmetContext}>
       <Routes>
         <Route element={<Applayout />} path="/" errorElement={<Error />}>
           <Route index path="/" element={<Home />} />
@@ -27,6 +29,7 @@ export const Router = () => {
     </HelmetProvider>
   );
 };
+
 
 // export const routes = createBrowserRouter(
 //   createRoutesFromElements(

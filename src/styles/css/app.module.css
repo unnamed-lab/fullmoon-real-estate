@@ -720,6 +720,8 @@
 }
 
 .loading_screen {
+  z-index: 999;
+  position: fixed;
   width: -webkit-fill-available;
   height: 100dvh;
   background-color: #ffffff;
