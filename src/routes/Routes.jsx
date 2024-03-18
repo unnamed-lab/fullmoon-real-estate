@@ -11,37 +11,24 @@ import { HelmetProvider } from "react-helmet-async";
 
 export const helmetContext = {};
 
-export const Router = () => {
+export const routes = () => {
   return (
-    <HelmetProvider context={helmetContext}>
-      <Routes>
-        <Route element={<Applayout />} path="/" errorElement={<Error />}>
-          <Route index path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="faq" element={<Faq />} />
-          <Route path="about" element={<About />} />
-          <Route path="service" element={<Service />} />
-          <Route path="not-found" element={<NotFound />} />
-          {/* <Route path="buy" element={<Buy />} /> */}
-        </Route>
-      </Routes>
-    </HelmetProvider>
+    <Routes>
+      <Route element={<Applayout />} path="/" errorElement={<Error />}>
+        <Route index path="/" element={<Home />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="contact" element={<Contact />} />
+        <Route path="faq" element={<Faq />} />
+        <Route path="about" element={<About />} />
+        <Route path="service" element={<Service />} />
+        <Route path="not-found" element={<NotFound />} />
+        {/* <Route path="buy" element={<Buy />} /> */}
+      </Route>
+    </Routes>
   );
 };
 
+export const Router = () => {
+  return <HelmetProvider context={helmetContext}>{routes()}</HelmetProvider>;
+};
 
-// export const routes = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route element={<Applayout />} path="/" errorElement={<Error />}>
-//       <Route index path="/" element={<Home />} />
-//       <Route path="contact" element={<Contact />} />
-//       <Route path="about" element={<About />} />
-//       <Route path="service" element={<Service />} />
-//       <Route path="buy" element={<Buy />} />
-//     </Route>
-//   ),
-//   {
-//     basename: "/",
-//   }
-// );

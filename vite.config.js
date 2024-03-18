@@ -7,7 +7,10 @@ export default defineConfig({
   ssr: {
     noExternal: ["react-helmet-async"],
   },
+  root: "./",
   build: {
     minify: false,
+    outDir: "dist",
   },
+  publicDir: ["public", "public/static"],
 });
