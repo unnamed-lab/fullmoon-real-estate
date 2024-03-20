@@ -12,7 +12,7 @@ function MetaTags({
 }) {
   const banner =
     "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710556288/fullmoon-real-estate/thumb/thumb_banner_ijtpo2.jpg";
-  const pageLink = "https://www.fullmoonrealestateproperties.com/";
+  const pageLink = "https://www.fullmoonrealestateproperties.com";
   const bannerImg =
     import.meta.env.NODE_ENV === "production"
       ? banner
