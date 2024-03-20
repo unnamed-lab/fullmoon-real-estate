@@ -1,17 +1,25 @@
-import fs from "node:fs/promises";
 import express from "express";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "url";
 
 // Constants
 const isProduction = process.env.NODE_ENV === "production";
 const port = process.env.PORT || 5173;
 const base = process.env.BASE || "/";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const resolve = (p) => path.resolve(__dirname, p);
 
 // Cached production assets
 const templateHtml = isProduction
-  ? await fs.readFile("./dist/client/index.html", "utf-8")
+  ? fs.readFileSync(resolve("dist/client/index.html"), "utf-8")
   : "";
+
 const ssrManifest = isProduction
-  ? await fs.readFile("./dist/client/.vite/ssr-manifest.json", "utf-8")
+  ? await fs.readFileSync(
+      resolve("./dist/client/.vite/ssr-manifest.json"),
+      "utf-8"
+    )
   : undefined;
 
 // Create http server
@@ -28,23 +36,31 @@ if (!isProduction) {
   });
   app.use(vite.middlewares);
 } else {
-  const compression = (await import("compression")).default;
-  const sirv = (await import("sirv")).default;
-  app.use(compression());
-  app.use(base, sirv("./dist/client", { extensions: [] }));
+  app.use((await import("compression")).default());
+  app.use(
+    (await import("serve-static")).default(resolve("dist/client"), {
+      index: false,
+    })
+  );
+
+  // const sirv = (await import("sirv")).default;
+  // app.use(base, sirv("./dist/client", { extensions: [] }));
 }
 
 // Serve HTML
 app.use("*", async (req, res) => {
   try {
-    const url = req.originalUrl.replace(base, "");
+    // const url = req.originalUrl.replace(base, "");
+    const url = "/";
 
     let template;
     let render;
     if (!isProduction) {
       // Always read fresh template in development
-      template = await fs.readFile("./index.html", "utf-8");
+      // template = await fs.readFile("./index.html", "utf-8");
+      template = fs.readFileSync(resolve("dist/client/index.html"), "utf-8");
       template = await vite.transformIndexHtml(url, template);
+
       render = (await vite.ssrLoadModule("/src/entry-server.jsx")).render;
     } else {
       template = templateHtml;

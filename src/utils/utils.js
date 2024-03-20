@@ -31,4 +31,12 @@ export const keywords = [
   "we buy property",
   "selling your property",
   "commercial properties for sale near me",
+  "estate agents near me",
+  "apartments for sale",
+  "new homes for sale near me",
+  "land for rent",
+  "land buyers",
+  "cheap land",
+  "vacant land for sale near me",
+  "vacant land for sale",
 ];

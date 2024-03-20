@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const toAbsolute = (p) => path.resolve(__dirname, p);
 
-const template = fs.readFileSync(toAbsolute("dist/client/index.html"), "utf-8");
+const template = fs.readFileSync(toAbsolute("dist/static/index.html"), "utf-8");
 
 const ssrManifest = fs.readFileSync(
   "./dist/client/.vite/ssr-manifest.json",
@@ -28,13 +28,12 @@ const routesToPrerender = fs
 (async () => {
   // pre-render each route...
   for (const url of routesToPrerender) {
-    const rendered = await render(url, ssrManifest);
+    const rendered = render(url, ssrManifest);
     const html = template
       .replace(`<!--app-head-->`, rendered.head ?? "")
       .replace(`<!--app-html-->`, rendered.html ?? "");
 
-    // const filePath = `dist/client/static${url === "/" ? "/index" : url}.html`;
-    const filePath = `public/static${url === "/" ? "/index" : url}.html`;
+    const filePath = `dist/static${url === "/" ? "/index" : url}.html`;
     fs.writeFileSync(toAbsolute(filePath), html);
     console.log("pre-rendered:", filePath);
   }
