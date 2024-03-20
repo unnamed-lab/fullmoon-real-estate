@@ -1,17 +1,19 @@
 import { Helmet } from "react-helmet-async";
 import { getTheme } from "../../utils/navigate";
 import logoImg from "../../assets/icons/logo.png";
+import favicon from "../../assets/icons/favicon.ico";
 import { keywords } from "../../utils/utils";
 
 function MetaTags({
   title = "Fullmoon Real Estate Properties",
   desc = `At Fullmoon Real Estate Properties, we believe in more than just buying and selling properties.`,
-  index,
-  follow,
+  index=true,
+  follow=true,
 }) {
   const bannerImg =
     "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710556288/fullmoon-real-estate/thumb/thumb_banner_ijtpo2.jpg";
   const pageLink = "https://www.fullmoonrealestateproperties.com";
+  const domain = "fullmoonrealestateproperties.com";
   const imgW = "800";
   const imgH = "600";
   const type = "website";
@@ -34,10 +36,10 @@ function MetaTags({
       <Helmet>
         <link
           rel="icon"
-          type="image/svg+xml"
-          href={logoImg}
+          type="image/x-icon"
+          href={favicon}
           data-react-helmet="true"
-        />
+        ></link>
         <title>{title}</title>
         <meta name="description" content={desc} data-react-helmet="true" />
         <meta

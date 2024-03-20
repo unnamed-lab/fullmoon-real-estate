@@ -5,7 +5,11 @@ export function numberToText(num) {
 }
 
 export const keywords = [
+  "fullmoon",
+  "fullmoon real",
+  "fullmoon real estate",
   "fullmoon real estate properties",
+  "real estate properties",
   "real estate",
   "we buy land",
   "home selling",
