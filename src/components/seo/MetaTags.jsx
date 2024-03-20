@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import { getTheme } from "../../utils/navigate";
-import bannerImage from "/thumb_banner.jpg";
 import logoImg from "../../assets/icons/logo.png";
 import { keywords } from "../../utils/utils";
 
@@ -10,13 +9,9 @@ function MetaTags({
   index,
   follow,
 }) {
-  const banner =
+  const bannerImg =
     "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710556288/fullmoon-real-estate/thumb/thumb_banner_ijtpo2.jpg";
   const pageLink = "https://www.fullmoonrealestateproperties.com";
-  const bannerImg =
-    import.meta.env.NODE_ENV === "production"
-      ? banner
-      : `${pageLink}${bannerImage}`;
   const imgW = "800";
   const imgH = "600";
   const type = "website";
