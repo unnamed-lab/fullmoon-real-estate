@@ -60,7 +60,8 @@ function MetaTags({
     telephone: company.telephone,
     email: company.email,
     logo: `${pageLink}/logo.png`,
-    keywords: keywords.join(", "),
+    keywords: ["fullmoon real estate properties"],
+    description: desc,
     priceRange: "$$$",
     currenciesAccepted: "NGN",
     contactPoint: [
