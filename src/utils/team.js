@@ -29,8 +29,9 @@ export const team = [
 ];
 
 export const company = {
-  name: "Fullmoon Real Estate",
+  name: "Fullmoon Real Estate Properties",
   email: "fullmoonrealestateltd@gmail.com",
+  telephone: "+2347088865851",
   social: {
     facebook: "https://web.facebook.com/FREPABO",
     twitter: "https://twitter.com/FULLMOONRE2180s",
