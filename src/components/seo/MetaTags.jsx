@@ -22,7 +22,13 @@ function MetaTags({
   const schemaObj = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    image: [],
+    name: "Fullmoon Real Estate Properties",
+    image: [
+      "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1710556288/fullmoon-real-estate/thumb/thumb_banner_ijtpo2.jpg",
+      "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1711006887/fullmoon-real-estate/thumb/vlcsnap-2024-03-20-23h33m04s102_wioc5l.png",
+      "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1711006863/fullmoon-real-estate/thumb/vlcsnap-2024-03-20-23h32m47s734_zuzvpd.png",
+      "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1711006865/fullmoon-real-estate/thumb/vlcsnap-2024-03-20-23h33m35s734_grfc0i.png",
+    ],
     legalName: "Fullmoon Real Estate Properties",
     address: {
       "@type": "PostalAddress",
