@@ -78,7 +78,7 @@ function Home() {
 
   const adverts = [
     {
-      info: `When it comes to investing in real estate, there are many factors to consider which includes location, finance, condition of the property, purpose of premises and so on. Knowledge is very important when investing in real estate but what is mostly important is getting the right help and guidance. 
+      info: `When it comes to investing in real estate, there are many factors to consider which includes location, finance, condition of the property, purpose of premises and so on. Knowledge is very important when investing in real estate but what is mostly important is getting the right help and guidance. \n
       This is why Fullmoon real estate 🏡 properties is here to walk you through the path🏡🌇🥰`,
       img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1712849351/fullmoon-real-estate/adverts/437054064_18392718598076693_3578239639044438744_n_ge4v6g.jpg",
       url: "#",

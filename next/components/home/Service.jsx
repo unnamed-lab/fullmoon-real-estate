@@ -33,7 +33,7 @@ function Service() {
         <p>
           Welcome to Fullmoon Real Estate Properties, where we offer a
           comprehensive range of services tailored to meet your every real
-          estate need. Whether you're buying, selling, renting, or investing,
+          estate need. Whether you&apos;re buying, selling, renting, or investing,
           our dedicated team of professionals is here to guide you through every
           step of the process.
         </p>
