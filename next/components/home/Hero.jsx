@@ -45,15 +45,12 @@ function Hero({
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-              delay: 2500,
+              delay: 4000,
               disableOnInteraction: false,
             }}
-            // pagination={{
-            //   clickable: true,
-            // }}
-            effect="fade"
-            fadeEffect={{ crossfade: true }}
-            // navigation={true}
+            loop={true}
+            slidesPerView={1}
+            effect="coverflow"
             modules={[Autoplay, Pagination, Navigation, EffectFade]}
             className={styles.swiper}
           >
