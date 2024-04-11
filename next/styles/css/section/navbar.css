@@ -146,7 +146,8 @@
   .top_banner .banner_sub {
     padding: 0.8rem 0;
     grid-template-columns: 1fr 0.75fr;
-    gap: 0.5rem;
+    gap: 1rem;
+    font-size: 0.8rem;
   }
 }
 
