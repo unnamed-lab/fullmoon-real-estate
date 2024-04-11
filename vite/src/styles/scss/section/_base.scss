@@ -1,0 +1,71 @@
+@use "../custom" as *;
+:root {
+  body {
+    background-color: $white;
+    margin: 0;
+  }
+  // Scrollbar
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: $g-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 12px;
+
+    &:hover {
+      background: $secondary;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
+
+  p {
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+  }
+
+  img,
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+
+  ul {
+    list-style: none;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    padding-inline-start: 0px;
+  }
+  section {
+    padding: 2rem 4rem;
+
+    @include responsive(mobile) {
+      padding: 1.25rem;
+    }
+  }
+
+  .gallery_container {
+    display: flex;
+    gap: 3rem;
+    margin: 1rem 0;
+    padding-top: 1rem;
+
+    @include responsive(mobile) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      align-items: stretch;
+    }
+  }
+
+}

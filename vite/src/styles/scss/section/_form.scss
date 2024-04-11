@@ -1,0 +1,219 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.input_group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 1rem 0;
+  gap: 1rem;
+
+  .input_selector {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    min-width: 65px;
+    min-height: 45px;
+    border-radius: 4px;
+    background-color: rgba($color: $g-100, $alpha: 0.1);
+    backdrop-filter: blur(2px);
+    text-align: center;
+    transition: all 500ms ease-in-out;
+
+    &:hover {
+      background-color: rgba($color: $secondary, $alpha: 0.3);
+    }
+
+    &:has(> input[type="radio"]:checked) {
+      background-color: $secondary;
+    }
+
+    input[type="radio"] {
+      cursor: pointer;
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+  .search_group {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    border-radius: 40px;
+    padding: 1rem;
+    @include responsive(mobile) {
+      width: -webkit-fill-available;
+      padding: 0.85rem;
+    }
+
+    .search_input {
+      flex: 1;
+      line-height: 18px;
+      border-radius: 40px;
+      padding: 0.875rem;
+      border: none;
+      box-shadow: 0px 0px 0px 0.5px $g-200;
+      margin-right: 1rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 22px;
+
+      @include responsive(mobile) {
+        line-height: 16px;
+        margin-right: 0.5rem;
+      }
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+
+  &.input_container {
+    margin-bottom: 1.25rem;
+    label {
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: $accent;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+
+      @include responsive(mobile) {
+        margin-bottom: 0.33rem;
+      }
+
+      span {
+        color: $secondary;
+      }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    textarea {
+      font-family: Poppins, sans-serif;
+      width: 100%;
+      border-radius: 1px;
+      border: none;
+      box-shadow: 0px 0px 0px 0.5px $g-600;
+      padding: 0.75rem 1.25rem;
+      color: $g-500;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      &:focus,
+      :focus-visible,
+      :focus-within {
+        outline: none;
+        box-shadow: 0px 0px 2px 1px $primary;
+      }
+
+      &::placeholder {
+        color: rgba($color: $g-600, $alpha: 0.6);
+      }
+    }
+
+    input[type="checkbox"] {
+      cursor: pointer;
+      border: none;
+      width: 18px;
+      height: 18px;
+      background-color: $g-300;
+      margin-right: 1rem;
+      border-radius: 1px;
+    }
+  }
+}
+
+.accordion {
+  cursor: pointer;
+  width: -webkit-fill-available;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 1.75rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 3px 0px $g-300;
+  margin-bottom: 1.5rem;
+
+  @include responsive(mobile) {
+    padding: 0.5rem 1.25rem;
+  }
+
+  .header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 1.5rem 0;
+    color: $accent;
+
+    p {
+      width: 90%;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      transition: transform 500ms ease;
+
+      &.active {
+        transform: translateY(-50%) rotateZ(45deg);
+      }
+    }
+  }
+  .content {
+    overflow: hidden;
+    opacity: 0;
+    font-weight: 400;
+    max-height: 0;
+    transition: all 500ms ease;
+
+    &.show {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      max-height: max-content;
+      display: block;
+      opacity: 1;
+
+      @include responsive(mobile) {
+        margin-top: 0.25rem;
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+}
+
+.ohnohoney {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+}

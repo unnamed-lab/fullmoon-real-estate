@@ -1,0 +1,21 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.contact {
+  margin: 2% 10%;
+  gap: 1rem;
+
+  @include responsive(mobile) {
+    margin: 7.5dvh 2dvw;
+  }
+  .name_group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @include responsive(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0rem;
+    }
+  }
+}
