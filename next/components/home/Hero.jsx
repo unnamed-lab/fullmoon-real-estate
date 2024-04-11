@@ -2,13 +2,16 @@
 import styles from "../../styles/css/app.module.css";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { register } from "swiper/element/bundle";
-// import Swiper and modules styles
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-register();
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 function Hero({
   bgImg,
@@ -38,26 +41,32 @@ function Hero({
     <section className={styles.hero} style={customStyles}>
       {slider && Array.isArray(bgImg) ? (
         <>
-          <swiper-container
-            ref={swiperElRef}
-            slides-per-view="1"
-            speed="500"
-            loop="true"
-            navigation="true"
-            // pagination="true"
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className={styles.swiper}
           >
             {bgImg?.map((el, index) => {
               return (
-                <swiper-slide key={index} lazy="true">
+                <SwiperSlide>
                   <Image
                     src={el}
                     alt={`Slideshow ${index + 1}`}
                     fetchPriority="high"
                   />
-                </swiper-slide>
+                </SwiperSlide>
               );
             })}
-          </swiper-container>
+          </Swiper>
         </>
       ) : (
         <>
