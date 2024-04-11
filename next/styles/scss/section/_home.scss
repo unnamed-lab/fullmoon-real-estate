@@ -14,12 +14,20 @@
   padding: 0 !important;
 
   @include responsive(mobile) {
-    height: 85dvh;
+    height: 55dvh;
   }
 
   .swiper {
     width: -webkit-fill-available !important;
     height: 100dvh !important;
+
+    .swiper_slide {
+      img {
+        width: 100%;
+        object-fit: contain;
+        height: auto;
+      }
+    }
   }
 
   .bgBackdrop {
@@ -210,6 +218,17 @@
 
       p {
         line-break: loose;
+      }
+
+      a {
+        width: 100%;
+
+        button {
+          @include responsive(mobile) {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
       }
     }
   }

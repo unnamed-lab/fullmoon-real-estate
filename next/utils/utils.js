@@ -46,7 +46,7 @@ const keywords = [
 ];
 
 export const webData = {
-  title: "Fullmoon Real Estate Properties - Build dream home on prime land",
+  title: "Fullmoon Real Estate Properties - Secure your dream home with us today",
   desc: "At Fullmoon Real Estate Properties, we believe in more than just buying and selling properties.",
   siteName: "Fullmoon Real Estate Properties",
   url: "https://www.fullmoonrealestateproperties.com/",
