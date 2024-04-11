@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 
 function Hero({
   bgImg,
@@ -48,20 +48,30 @@ function Hero({
               delay: 2500,
               disableOnInteraction: false,
             }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            // pagination={{
+            //   clickable: true,
+            // }}
+            effect="fade"
+            fadeEffect={{ crossfade: true }}
+            // navigation={true}
+            modules={[Autoplay, Pagination, Navigation, EffectFade]}
             className={styles.swiper}
           >
             {bgImg?.map((el, index) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={index} className={styles.swiper_slide}>
                   <Image
                     src={el}
                     alt={`Slideshow ${index + 1}`}
+                    width={1080}
+                    height={720}
                     fetchPriority="high"
+                    style={{
+                      width: 100 + "%",
+                      objectFit: "cover !important",
+                      objectPosition: "center !important",
+                      height: "auto",
+                    }}
                   />
                 </SwiperSlide>
               );
