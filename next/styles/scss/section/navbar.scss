@@ -149,7 +149,8 @@
     @include responsive(mobile) {
     padding: 0.8rem 0;
     grid-template-columns: 1fr .75fr;
-    gap: 0.5rem;
+    gap: 1rem;
+    font-size: .8rem;
   }
   }
 
