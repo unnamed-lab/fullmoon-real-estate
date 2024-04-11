@@ -1,0 +1,322 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.about_intro {
+  display: block;
+  margin-bottom: 5%;
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 50px);
+
+  h2,
+  h3 {
+    text-transform: uppercase;
+    color: $accent;
+    text-align: center;
+    margin-block-end: 1em;
+  }
+
+  .about_intro_desc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 3rem;
+    padding: 1.5rem 10%;
+
+    @include responsive(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.25rem;
+      padding: 1.5rem 2.5%;
+    }
+
+    b {
+      color: $g-400;
+    }
+  }
+}
+
+.about_team {
+  background-color: rgba($color: $accent2, $alpha: 0.1);
+  padding: 2% 12% !important;
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 50px);
+
+  h2,
+  h3 {
+    text-transform: uppercase;
+    color: $g-500;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 12px;
+    margin-block-end: 1em;
+
+    @include responsive(mobile) {
+      text-align: center;
+    }
+  }
+
+  .about_team_gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 5% 0;
+
+    @include responsive(mobile) {
+      padding-top: 2rem;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+    }
+
+    li {
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      width: auto;
+      height: 390px;
+      background-color: $g-200;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 2px;
+
+      &::after {
+        content: "";
+        z-index: 11;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background: linear-gradient(180deg, transparent, $black);
+        opacity: 0.75;
+      }
+
+      .detail {
+        z-index: 12;
+        width: 80%;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white !important;
+
+        h4 {
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 25px;
+          letter-spacing: 0em;
+          text-align: center;
+          margin-block-start: 0.1em;
+          margin-block-end: 0.1em;
+        }
+
+        h5 {
+          font-size: 0.9rem;
+          font-weight: 300;
+          line-height: 25px;
+          letter-spacing: 0em;
+          text-align: center;
+          margin-block-start: 0.1em;
+          margin-block-end: 0.1em;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: saturate(1.2);
+      }
+    }
+  }
+}
+
+.about_service {
+  margin-top: 3%;
+  margin-bottom: 2%;
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 50px);
+
+  @include responsive(mobile) {
+    margin-top: 10%;
+    margin-bottom: 15%;
+  }
+  h2,
+  h3 {
+    text-transform: uppercase;
+    color: $accent;
+    margin-block-end: 1em;
+
+    @include responsive(mobile) {
+      text-align: center;
+    }
+  }
+
+  .about_service_gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 5% 0;
+    align-items: stretch;
+
+    @include responsive(mobile) {
+      padding-top: 2rem;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 4rem;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .thumbnail {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 173/120;
+        background-color: $g-200;
+        border-radius: 4px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0px 0px 30px -5px rgba($color: $black, $alpha: 0.2);
+        margin-bottom: 2rem;
+
+        &::after {
+          content: "";
+          z-index: 11;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($color: $black, $alpha: 0.3);
+          position: absolute;
+          top: 0;
+          left: 0;
+          backdrop-filter: blur(1px);
+        }
+        img {
+          z-index: 10;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        p {
+          width: 50%;
+          z-index: 12;
+          color: $white;
+          font-size: 1.25rem;
+          font-weight: 600;
+          line-height: 25px;
+          letter-spacing: -0.6499999761581421px;
+          text-transform: capitalize;
+        }
+      }
+      p {
+        width: 80%;
+        text-align: center;
+        color: $text-light;
+        font-weight: 300;
+        line-height: 26px;
+        letter-spacing: 0em;
+      }
+    }
+  }
+}
+
+.about_testimonial {
+  margin-top: 3%;
+  margin-bottom: 2%;
+  opacity: 0;
+  @include scroll-animate(fade-in, 1s, linear, 50px);
+
+  @include responsive(mobile) {
+    margin-top: 10%;
+    margin-bottom: 20dvh;
+  }
+  h2,
+  h3 {
+    text-transform: uppercase;
+    color: $accent;
+    margin-block-end: 1em;
+
+    @include responsive(mobile) {
+      text-align: center;
+    }
+  }
+
+  .testimony_gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 5% 0;
+    align-items: stretch;
+
+    @include responsive(mobile) {
+      padding-top: 2rem;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 4rem;
+    }
+
+    li {
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($color: $primary, $alpha: 0.1);
+
+      span {
+        margin-right: auto;
+        margin-bottom: auto;
+      }
+
+      .testimonial_container {
+        display: flex;
+        flex-direction: column;
+        height: -webkit-fill-available;
+
+        .quote {
+          display: flex;
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 25px;
+          letter-spacing: 0em;
+          text-align: left;
+          margin-bottom: 2rem;
+        }
+
+        .profile {
+          display: flex;
+          align-items: center;
+          margin-top: auto;
+          // margin-top: 2.5rem;
+
+          .profile_img {
+            width: 70px;
+            height: 70px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1.5rem;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

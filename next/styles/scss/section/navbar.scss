@@ -1,0 +1,191 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.nav {
+  position: absolute;
+  left: 0;
+  z-index: 80;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  min-height: 50px;
+  padding: 0.15rem 6rem;
+  width: -webkit-fill-available;
+  background-color: $primary;
+
+  @include responsive(mobile) {
+    padding: 0rem 1rem;
+    // background-color: $black;
+  }
+
+  .brand_logo {
+    display: none;
+
+    @include responsive(mobile) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      background-color: $white;
+      padding: 5px 10px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .nav_menu_backdrop {
+    display: none;
+
+    @include responsive(mobile) {
+      z-index: 75;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      width: 100dvw;
+      height: 100%;
+
+      &.hide {
+        position: fixed;
+        display: none;
+      }
+    }
+  }
+
+  .nav_menu {
+    z-index: 80;
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 4rem;
+    @include responsive(mobile) {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      right: -100%;
+      background-color: $white;
+      transition: right 500ms ease;
+      gap: 3rem;
+      width: 60dvw;
+      height: 100%;
+      top: -5px;
+
+      margin-right: 0;
+
+      &.show {
+        right: 0;
+        color: $black;
+      }
+    }
+
+    li {
+      font-size: 0.95rem;
+
+      @include responsive(mobile) {
+        font-size: 1.25rem;
+      }
+
+      a {
+        color: $white;
+        font-weight: 600;
+        transition: all 500ms ease;
+
+        &.twist {
+          @include responsive(mediaup) {
+            color: $black;
+          }
+        }
+
+        @include responsive(mobile) {
+          color: $black;
+        }
+        &:hover {
+          color: $g-100;
+        }
+      }
+    }
+  }
+  .nav_toggle {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+
+    @include responsive(mobile) {
+      display: block;
+      margin-left: auto;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.top_banner {
+  width: -webkit-fill-available;
+  padding: 0.8rem 4rem;
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 2fr;
+  gap: 2.5rem;
+  justify-content: center;
+
+  @include responsive(mobile) {
+    padding: 0.8rem 0;
+    grid-template-columns: .9fr;
+    gap: 0.5rem;
+  }
+
+  .banner_sub {
+    display: flex;
+    gap: 2.5rem;
+
+    @include responsive(mobile) {
+    padding: 0.8rem 0;
+    grid-template-columns: 1fr .75fr;
+    gap: 0.5rem;
+  }
+  }
+
+}
+
+.banner_item {
+  display: flex;
+  align-items: center;
+
+  b {
+    color: $primary;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  &.brand_logo {
+    width: -webkit-fill-available;
+    height: clamp(60px, 60px, 120px);
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    @include responsive(mobile) {
+      display: none;
+      width: 50px !important;
+      height: 50px !important;
+    }
+
+    img {
+      width: clamp(60px, 80px, 120px);
+      height: clamp(60px, 80px, 120px);
+    }
+  }
+}

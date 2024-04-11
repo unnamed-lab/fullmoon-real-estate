@@ -1,0 +1,46 @@
+@use "../custom" as *;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint == mediadown {
+    @media (max-width: 1023px) {
+      @content;
+    }
+  } @else if $breakpoint == mediaup {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin scroll-animate($keyframe, $delay: 1s, $effect: linear, $offset: 0px) {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: $keyframe $effect forwards;
+    animation-delay: $delay;
+    animation-timeline: view();
+    animation-range-start: 50px;
+    animation-range-end: entry;
+  }
+}
+
+@mixin hero-bg($keyframe, $delay: 1s, $effect: linear, $offset: -5dvh) {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: $keyframe $effect forwards;
+    animation-delay: $delay;
+    animation-timeline: view(y);
+    animation-range: exit;
+  }
+}
