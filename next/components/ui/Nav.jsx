@@ -40,7 +40,7 @@ function Nav({ customColor }) {
         <div className="banner_item ">
           <div>
             <b>
-              Block A2 Suite <br /> HFP Eastline Shopping Complex
+              Block A2 Suite 337 <br /> HFP Eastline Shopping Complex
             </b>
             <p>Abraham Adesanya, Ajah</p>
           </div>
