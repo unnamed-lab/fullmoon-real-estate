@@ -30,7 +30,8 @@
 }
 @media (max-width: 767px) {
   .hero {
-    height: 55dvh;
+    padding-top: 3rem !important;
+    height: 40dvh !important;
   }
 }
 .hero .swiper {
@@ -175,6 +176,8 @@
   .welcome_note {
     grid-template-columns: 1fr;
     gap: 0.75rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
   }
 }
 .welcome_note .heading {

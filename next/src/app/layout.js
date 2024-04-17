@@ -14,6 +14,9 @@ const poppins = Poppins({
 export const metadata = {
   title: webData.title,
   description: webData.desc,
+  alternates: {
+    canonical: `${webData.url}`
+  },
   openGraph: {
     title: webData.title,
     description: webData.desc,
