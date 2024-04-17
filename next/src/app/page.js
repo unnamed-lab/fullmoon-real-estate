@@ -78,8 +78,7 @@ function Home() {
 
   const adverts = [
     {
-      info: `When it comes to investing in real estate, there are many factors to consider which includes location, finance, condition of the property, purpose of premises and so on. Knowledge is very important when investing in real estate but what is mostly important is getting the right help and guidance. \n
-      This is why Fullmoon real estate 🏡 properties is here to walk you through the path🏡🌇🥰`,
+      info: `When it comes to investing in real estate, there are many factors to consider which includes location, finance, condition of the property, purpose of premises and so on. Knowledge is very important when investing in real estate but what is mostly important is getting the right help and guidance.\nThis is why Fullmoon real estate 🏡 properties is here to walk you through the path🏡🌇🥰`,
       img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1712849351/fullmoon-real-estate/adverts/437054064_18392718598076693_3578239639044438744_n_ge4v6g.jpg",
       url: "#",
     },
@@ -93,24 +92,22 @@ function Home() {
     {
       info: `Easter promo🚀🏡✨
 
-Fullmoon real estate properties 🏡 is offering you an incredible opportunity to own a portion of the future.
-Hurry up now and make use of this 10% discount offer, you can secure your spot and enjoy instant allocation. This is your chance to be a proud owner of a land in a sunshine empire location!📍🏡🚀
-
-Original price
-🔰N5M
-Size 500qm
-🔰N3M
-Size 300sqm
-
-Promo Price
-🔰N4.5M
-Size 500sqm
-🔰N2.5M
-Size 300sqm
-
-BUY & BUILD
-Instant allocation
-
+Fullmoon real estate properties 🏡 is offering you an incredible opportunity to own a portion of the future.\nHurry up now and make use of this 10% discount offer, you can secure your spot and enjoy instant allocation. This is your chance to be a proud owner of a land in a sunshine empire location!📍🏡🚀\n
+Original price\n
+🔰N5M\n
+Size 500qm\n
+🔰N3M\n
+Size 300sqm\n
+\n
+Promo Price\n
+🔰N4.5M\n
+Size 500sqm\n
+🔰N2.5M\n
+Size 300sqm\n
+\n
+BUY & BUILD\n
+Instant allocation\n
+\n
 ⏰⏳Offer starts from 26th of March to 31st of April`,
       img: "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1712849364/fullmoon-real-estate/adverts/431558996_18390318862076693_4252296328898994076_n_ngy8jj.jpg",
       url: "#",
@@ -124,10 +121,10 @@ Instant allocation
   ];
 
   const bgImg = [
-    "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1712852714/fullmoon-real-estate/adverts/429776033_18382141249076693_6366554151565576408_n_hbnpuy.jpg",
-    "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1712852782/fullmoon-real-estate/adverts/424612509_18380321275076693_8418883854195931009_n_woehp6.jpg",
-    "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1712852765/fullmoon-real-estate/adverts/424621999_18380632450076693_6467250931109041286_n_sgkrom.jpg",
-    "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1712852671/fullmoon-real-estate/adverts/428496557_18382579594076693_4592233959626087657_n_qb5eof.jpg",
+    "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1713339730/fullmoon-real-estate/adverts/IMG_9489_zrnbmf.jpg",
+    "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1713339733/fullmoon-real-estate/adverts/IMG_9487_kb8es7.jpg",
+    "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1713339733/fullmoon-real-estate/adverts/IMG_9485_rmv4to.jpg",
+    "https://res.cloudinary.com/dbeh9dzsh/image/upload/v1713339746/fullmoon-real-estate/adverts/IMG_9486_cw7cf4.jpg",
   ];
 
   return (

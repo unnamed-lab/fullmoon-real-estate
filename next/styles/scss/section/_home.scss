@@ -14,7 +14,8 @@
   padding: 0 !important;
 
   @include responsive(mobile) {
-    height: 55dvh;
+    padding-top: 3rem !important;
+    height: 40dvh !important;
   }
 
   .swiper {
@@ -152,6 +153,8 @@
   @include responsive(mobile) {
     grid-template-columns: 1fr;
     gap: 0.75rem;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
   }
 
   .heading {

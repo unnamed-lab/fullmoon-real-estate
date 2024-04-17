@@ -50,10 +50,9 @@ function Contact() {
 function ContactForm() {
   const form = useRef(null);
   const [formData, setFormData] = useState({});
-  console.log(process.env);
-  // const mailServiceID = import.meta.env.VITE_MAIL_SERVICE_ID;
-  // const mailTemplateID = import.meta.env.VITE_MAIL_TEMPLATE_ID;
-  // const mailPublicKey = import.meta.env.VITE_MAIL_PUBLIC_KEY;
+  const mailServiceID = process.env.VITE_MAIL_SERVICE_ID;
+  const mailTemplateID = process.env.VITE_MAIL_TEMPLATE_ID;
+  const mailPublicKey = process.env.VITE_MAIL_PUBLIC_KEY;
 
   const onInputChange = (e) =>
     setFormData({

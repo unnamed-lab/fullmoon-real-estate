@@ -14,12 +14,9 @@ export default function Advert({ img, info = "", url = "#" }) {
           </div>
           <div className={styles.advert_info}>
             <p>
-              {info?.replace(
-                "\n",
-                <>
-                  <br />
-                </>
-              )}
+              {info?.split("\n")?.map((el, index) => {
+                return <p key={index}>{el}</p>;
+              })}
             </p>
             {url && (
               <Link href={url}>
